@@ -1,0 +1,94 @@
+---
+import { Code } from "astro:components";
+
+interface Props {
+  html: string;
+  css?: string; // Opcional, solo para visualización del fuente
+}
+
+const { html, css } = Astro.props;
+---
+
+<div class="playground-grid">
+  <div class="code-column">
+    <div class="label">(HTML)</div>
+    <div class="scroll-wrapper">
+      <Code code={html} lang="html" theme="github-light" />
+    </div>
+
+    {
+      css !== undefined && (
+        <div class="css-section">
+          <div class="label">(CSS)</div>
+          <div class="scroll-wrapper">
+            <Code code={css} lang="css" theme="github-dark" />
+          </div>
+        </div>
+      )
+    }
+  </div>
+
+  <div class="preview-column">
+    <div class="label">Vista Previa (Navegador)</div>
+    <!-- Pasamos el código directamente sin envoltorios -->
+    <iframe srcdoc={html}></iframe>
+  </div>
+</div>
+
+<style>
+  .playground-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: #333;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+    height: 600px;
+  }
+
+  .code-column,
+  .preview-column {
+    display: flex;
+    flex-direction: column;
+    background: #1e1e1e;
+    overflow: hidden;
+  }
+
+  .preview-column {
+    background: white;
+  }
+
+  .scroll-wrapper {
+    overflow: auto;
+    flex-grow: 1;
+  }
+
+  iframe {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+  }
+
+  .label {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    background: #9f9f9f;
+    color: #363636;
+    font-weight: bold;
+    border-bottom: 1px solid #363636;
+  }
+
+  .css-section {
+    border-top: 2px solid #333;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(pre) {
+    margin: 0 !important;
+    height: 100%;
+  }
+</style>

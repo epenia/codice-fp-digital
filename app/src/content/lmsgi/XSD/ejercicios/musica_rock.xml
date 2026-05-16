@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog periodo_historico_music="Rock &amp; Roll (1960-1980)" genero_predominante="Hard Rock/Pop">
+    <band id="B001" nombre="The Rolling Stones" genero="Blues Rock" fundadores="Keith Richards, Jagger" activo="si" trayectoria_anos="60+">
+        <membreros>
+            <miembro id="M001" nombre="Mick Jagger" rol="Vocalista/Danza" activo="si"/>
+            <miembro id="M002" nombre="Keith Richards" rol="Guitarrista Principal" activo="si"/>
+            <miembro id="M003" nombre="Charlie Watts" rol="Baterista" activo="si"/>
+            <miembro id="M004" nombre="Bill Wyman" rol="Bajo" activo="si"/>
+        </membreros>
+        <disquera principal="London Records" fondo_catalogo="Blues Americano">
+            <album id="A001" titulo="Sticky Fingers" anio="1971" productor="Andrew Loog Oldham" formato_original="Vinyl LP">
+                <canción id="S001" titulo="Brown Sugar" duracion_min="3.7" hit_single="si">
+                    <compositor fuente="Richards" notas_destacadas="Riff característico y narrativo; temática de la seducción y el escape."/>
+                    <estilo tiempo_sugerido="ritmo cañíva" complejidad="media"/>
+                    <instrumentacion sección="Riffs de guitarra" nivel="Alto" tipo="Rasgueo rítmico"/>
+                    <metadata_musical tipo="Ritmo" tiempo_bpm="110"/>
+                </canción>
+                <canción id="S002" titulo="Wild Horses" duracion_min="3.5" hit_single="si">
+                    <compositor fuente="Jagger" notas_destacadas="Melancolía y letras poéticas con influencia country/folk."/>
+                    <estilo tiempo_sugerido="balada romántica etérea" complejidad="media-alta"/>
+                    <instrumentacion sección="Coro y armonías" nivel="Alto" tipo="Vocales superpuestas"/>
+                    <metadata_musical tipo="Tonalidad" escala="Menor Natural"/>
+                </canción>
+            </album>
+            <album id="A002" titulo="Exile on Main St." anio="1972" productor="N/A" formato_original="Vinyl LP">
+                <canción id="S003" titulo="Tattoo You" duracion_min="3.2" hit_single="si">
+                    <compositor fuente="Mix" notas_destacadas="Combinación de sonidos folk y rock americano de diversa procedencia."/>
+                    <estilo tiempo_sugerido="ritmo bailable con sabor tostones" complejidad="media"/>
+                    <instrumentacion sección="Percusión" nivel="Alto" tipo="Ritmo Syncopado"/>
+                    <metadata_musical tipo="Género secundario" etiqueta="Psychedelic Blues"/>
+                </canción>
+            </album>
+        </disquera>
+        <gira_destacada nombre="Live from Fillmore East" anio_fecha="1973" ubicacion="Nueva York, EE. UU.">
+            <nota_histórica>Grabación crucial que definió su nivel de energía en directo.</nota_histórica>
+            <contenido_técnico>
+                <numero_canciones cantidad="18" repertorio_min="3"/>
+                <dispositivo_grabacion tipo="Analógica" calidad_sonido="Profesional" máx_canales="24"/>
+                <tiempo_total_horas duracion="1.8" duración_estimada_hrs="1.8"/>
+                <audiencia_estimada cantidad="20000" tipo="Público masivo"/>
+            </contenido_técnico>
+        </gira_destacada>
+    </band>
+    <band id="B002" nombre="Queen" genero="Rock Operístico" fundadores="May, Mercury, Taylor" activo="no" trayectoria_anos="40+">
+        <membreros>
+            <miembro id="M005" nombre="Freddie Mercury" rol="Vocalista/Showman" activo="si"/>
+            <miembro id="M006" nombre="Brian May" rol="Guitarrista/Armonías" activo="si"/>
+            <miembro id="M007" nombre="Roger Taylor" rol="Baterista/Vocales Secundarios" activo="si"/>
+            <miembro id="M008" nombre="John Deacon" rol="Bajo/Compositor" activo="si"/>
+        </membreros>
+        <disquera principal="EMI Records" fondo_catalogo="Broadway Rock">
+            <album id="A003" titulo="A Night at the Opera" anio="1975" productor="Roy Thomas Baker" formato_original="Vinyl LP">
+                <canción id="S007" titulo="Bohemian Rhapsody" duracion_min="5.5" hit_single="si">
+                    <compositor fuente="Mercury/May" notas_destacadas="Transición compleja: Balada -> Ópera -> Rock duro."/>
+                    <estilo tiempo_sugerido="variado de género" complejidad="muy alta"/>
+                    <estructura_musical tipo="Sinfónica" secciones="Balada, Ópera, Hard Rock"/>
+                    <elementos_sonoros detalle="Coral, piano, voz operística" complejidad_sonora="Múltiple"/>
+                </canción>
+                <canción id="S008" titulo="Love of My Life" duracion_min="3.5" hit_single="si">
+                    <compositor fuente="Mercury" notas_destacadas="Una balada espectacular que muestra el rango vocal y la pasión."/>
+                    <estilo tiempo_sugerido="lento y emotivo" complejidad="media-alta"/>
+                    <elementos_sonoros detalle="Arricios vocales, arpegios de guitarra" complejidad_sonora="Armónica"/>
+                </canción>
+            </album>
+            <album id="A004" titulo="News of the World" anio="2000" productor="N/A" formato_original="Digital Audio">
+                <canción id="S009" titulo="Don't Stop Me Now" duracion_min="3.2" hit_single="si">
+                    <compositor fuente="Mercury" notas_destacadas="Himno de la euforia y la energía pop-rock puro."/>
+                    <estilo tiempo_sugerido="potente y alegre" complejidad="media"/>
+                    <elementos_sonoros detalle="Clímax coral y ritmos rápidos" complejidad_sonora="Potencial"/>
+                </canción>
+            </album>
+        </disquera>
+        <gira_destacada nombre="Motown at Wembley" anio_fecha="1986" ubicacion="Wembley Stadium">
+            <nota_histórica>Una de las actuaciones en vivo mejor documentadas de la historia del rock.</nota_histórica>
+            <contenido_técnico>
+                <numero_canciones cantidad="25" repertorio_min="5"/>
+                <dispositivo_grabacion tipo="Multitrack Digital" calidad_sonido="Excelente" máx_canales="32"/>
+                <tiempo_total_horas duracion="3.5" duración_estimada_hrs="3.5"/>
+                <audiencia_estimada cantidad="80000" tipo="Evento masivo"/>
+            </contenido_técnico>
+        </gira_destacada>
+    </band>
+</catalog>

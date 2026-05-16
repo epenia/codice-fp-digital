@@ -1,0 +1,44 @@
+---
+import { Code } from "astro:components";
+
+interface Props {
+  xml: string;
+}
+
+const { xml } = Astro.props;
+---
+
+<div class="xml-snippet">
+  <div class="label">XML de referencia</div>
+  <div class="scroll-wrapper">
+    <Code code={xml} lang="xml" theme="github-light" />
+  </div>
+</div>
+
+<style>
+  .xml-snippet {
+    margin: 2rem 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1e1e1e;
+  }
+
+  .label {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    background: #9f9f9f;
+    color: #363636;
+    font-weight: bold;
+    border-bottom: 1px solid #363636;
+  }
+
+  .scroll-wrapper {
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  :global(pre) {
+    margin: 0 !important;
+  }
+</style>

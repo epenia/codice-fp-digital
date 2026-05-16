@@ -1,0 +1,13 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XSD/ejercicios/enunciados_gemini/hotel_reservas_ejercicio_B.md";
+import hotelXml from "../../../content/lmsgi/XSD/ejercicios/hotel_reservas.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+---
+
+<Base>
+    <nav><a href="../../index.html">← Volver al índice</a></nav>
+    <h1>Ejercicio Gemini: Hotel - Ejercicio B</h1>
+    <ContenidoEjercicio />
+    <XmlCodeSnippet xml={hotelXml} />
+</Base>

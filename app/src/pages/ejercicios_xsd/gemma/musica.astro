@@ -1,0 +1,13 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XSD/ejercicios/enunciados_gemma/ejercicio4_musica.md";
+import musicaXml from "../../../content/lmsgi/XSD/ejercicios/musica_rock.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+---
+
+<Base>
+    <nav><a href="../../index.html">← Volver al índice</a></nav>
+    <h1>Ejercicio Gemma: Música</h1>
+    <ContenidoEjercicio />
+    <XmlCodeSnippet xml={musicaXml} />
+</Base>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotel_system sistema_gestion="Opencode v2.0" fecha_revision="2026-05-16">
+    <servicios_globales>
+        <servicio id="S_CORE_01" nombre="Desayuno Buffet Diario" tipo="Alimentación" coste_unidad="25.00" periodo_servicio="Mañana" cobertura_habitacional="todas" inclusión_completa="No"/>
+        <servicio id="S_CORE_02" nombre="Servicio de Lavandería Premium" tipo="Servicios Personales" coste_unidad="10/kg" periodo_servicio="Todo el día" disponibilidad_minimas="4h" pago_anticipo_requerido="Si"/>
+        <servicio id="S_CORE_03" nombre="Wifi de Alta Velocidad" tipo="Conectividad" coste_unidad="Taxa/Estadía" periodo_servicio="Todo el día" soporte_dispositivos="Ilimitado" política_uso="Solo huéspedes"/>
+        <servicio id="S_CORE_04" nombre="Estacionamiento Cubierto" tipo="Aparcamiento" coste_unidad="15.00/día" periodo_servicio="24 horas" restricciones="Solo coches" pago_automático="Si" />
+        <servicio id="S_EXTRA_01" nombre="Traslado Aeropuerto" tipo="Transporte" coste_unidad_base="45.00" periodo_servicio="Por demanda" distancia_max_km="25"/>
+    </servicios_globales>
+    <hotel id="H101" nombre="Gran Palacio del Centro" clasificacion="5 Estrellas" capacidad_maxima_personas="300" ubicacion_ciudad="Madrid">
+        <infraestructura>
+            <departamento nombre="Recepción" horario_operativo="24/7" gestionado_por="Staff Global" personal_recursos="Altos"/>
+            <departamento nombre="Restaurante Principal" horario_operativo="08:00-23:00" capacidad_max_mesas="150" estilo_gastronomico="Alta Cocina Española"/>
+        </infraestructura>
+        <tipos_habitacion>
+            <!-- Tipo Estándar -->
+            <tipo id="T1" nombre="Estándar" descripcion="Habitacional funcional, ideal para viajes de negocios o estancias cortas." base_familia="Individual" capacidad_maxima="2" tarifa_base_minima="120.00" equipamiento_base="TV, Minibarr, Escritorio"/>
+            <!-- Tipo Junior Suite -->
+            <tipo id="T2" nombre="Junior Suite" descripcion="Excelente espacio social con zona de estar y zona de trabajo separadas. Ideal para estancias largas." base_familia="Pareja" capacidad_maxima="3" tarifa_base_minima="280.00" equipamiento_extra="Zona de estar secundaria, fuente" />
+            <!-- Tipo Presidencial -->
+            <tipo id="T3" nombre="Presidencial" descripcion="Lujo máximo, incluye servicio de mayordomo y vistas panorámicas garantizadas desde el balcón privado." base_familia="Familia Grande" capacidad_maxima="6" tarifa_base_minima="500.00" complementos_incluidos="Welcome Drink, Servicio de Mayordomo"/>
+        </tipos_habitacion>
+        <reservas>
+            <reserva id="R001" fecha_checkin="2024-10-01" fecha_checkout="2024-10-05" estado_pago="Pagado">
+                <cliente id="C101" nombre="Andrea López" email="andrea.l@ejemplo.com" descripcion_viaje="Turístico familiar">
+                    <datos_registro documento_identidad="DNI-12345678" nacionalidad="Española">
+                        <direccion>Calle Mayor, 12, 28001 Madrid</direccion>
+                        <telefono_contacto>600111222</telefono_contacto>
+                    </datos_registro>
+                </cliente>
+                <detalle_estancia>
+                    <habitacion id_tipo="T2" num_asignada="205" ocupantes_adultos="2" ocupantes_niños="1">
+                        <tipo_reserva>Junior Suite</tipo_reserva>
+                        <servicios_extra_detalles>
+                            <servicio ref_id="S_CORE_01" cantidad="4" costo_extra="25.00"/>
+                            <servicio ref_id="S_CORE_02" cantidad="1" costo_extra="10.00"/>
+                            <concepto_adicional nombre="Traslado maletas" unidad="Servicio" costo_extra="30.00"/>
+                        </servicios_extra_detalles>
+                    </habitacion>
+                    <resumen_facturacion>
+                        <subtotal_estadia moneda="EUR">1350.00</subtotal_estadia>
+                        <impuesto_turistico tipo="Estatal" tasa="1.5%" monto_impuesto="20.25"/>
+                        <coste_total moneda="EUR">1370.25</coste_total>
+                    </resumen_facturacion>
+                </detalle_estancia>
+            </reserva>
+            <reserva id="R002" fecha_checkin="2024-07-20" fecha_checkout="2024-07-22" estado_pago="Pendiente">
+                <cliente id="C102" nombre="Roberto García" email="roberto.g@ejemplo.com" descripcion_viaje="Negocios por Obra">
+                    <datos_registro documento_identidad="DNI-87654321" nacionalidad="Española">
+                        <direccion>Avenida de la Paz, 45, 28003 Madrid</direccion>
+                        <telefono_contacto>600333444</telefono_contacto>
+                    </datos_registro>
+                </cliente>
+                <detalle_estancia>
+                    <habitacion id_tipo="T1" num_asignada="103" ocupantes_adultos="1" ocupantes_niños="0">
+                        <tipo_reserva>Estándar</tipo_reserva>
+                        <servicios_extra_detalles>
+                            <servicio ref_id="S_CORE_03" cantidad="2" costo_extra="0.00"/>
+                            <concepto_adicional nombre="Servicio de Conserje" unidad="Servicio" costo_extra="50.00"/>
+                        </servicios_extra_detalles>
+                    </habitacion>
+                    <resumen_facturacion>
+                        <subtotal_estadia moneda="EUR">550.00</subtotal_estadia>
+                        <impuesto_turistico tipo="Estatal" tasa="1.5%" monto_impuesto="8.25"/>
+                        <coste_total moneda="EUR">558.25</coste_total>
+                    </resumen_facturacion>
+                </detalle_estancia>
+            </reserva>
+        </reservas>
+    </hotel>
+    <hotel id="H202" nombre="Retiro Urbano Boutique" clasificacion="4 Estrellas" capacidad_maxima_personas="150" ubicacion_ciudad="Barcelona">
+        <infraestructura>
+            <departamento nombre="Restaurante Gourmet" horario_operativo="12:00-23:00" capacidad_max_mesas="100" estilo_gastronomico="Cocina Mediterránea Moderna"/>
+            <departamento nombre="Reuniones Ejecutivas" horario_operativo="09:00-20:00" capacidad_max_personas="30" equipo_audiovisual_disponible="Yes"/>
+        </infraestructura>
+        <tipos_habitacion>
+            <tipo id="T4" nombre="Doble Con Vista Mar" descripcion="Habitación ideal para dos, garantizando vistas parciales al Mediterráneo." base_familia="Pareja" capacidad_maxima="2" tarifa_base_minima="180.00" equipamiento_base="Minibarr Grande, Muebles de madera natural"/>
+            <tipo id="T5" nombre="Familiar Conexión" descripcion="Ampliación habitable con puerta interior, ideal para familias que buscan privacidad." base_familia="Familia" capacidad_maxima="4" tarifa_base_minima="350.00" complementos_incluidos="Mini-bar de bienvenida"/>
+        </tipos_habitacion>
+        <reservas>
+             <reserva id="R003" fecha_checkin="2025-01-15" fecha_checkout="2025-01-18" estado_pago="Pagado">
+                <cliente id="C103" nombre="Familia Martínez" email="martinez@ejemplo.com" descripcion_viaje="Vacacional familiar">
+                    <datos_registro documento_identidad="DNI-99887766" nacionalidad="Española">
+                        <direccion>Passeig de Gràcia, 78, 08007 Barcelona</direccion>
+                        <telefono_contacto>600555666</telefono_contacto>
+                    </datos_registro>
+                </cliente>
+                <detalle_estancia>
+                    <habitacion id_tipo="T5" num_asignada="301" ocupantes_adultos="2" ocupantes_niños="2">
+                        <tipo_reserva>Familiar Conexión</tipo_reserva>
+                        <servicios_extra_detalles>
+                            <servicio ref_id="S_CORE_03" cantidad="3" costo_extra="0.00"/>
+                            <servicio ref_id="S_CORE_04" cantidad="3" costo_extra="45.00"/>
+                            <concepto_adicional nombre="Mini-bar de bienvenida" unidad="Servicio" costo_extra="15.00"/>
+                        </servicios_extra_detalles>
+                    </habitacion>
+                    <resumen_facturacion>
+                        <subtotal_estadia moneda="EUR">960.00</subtotal_estadia>
+                        <impuesto_turistico tipo="Local" tasa="3%" monto_impuesto="15.00"/>
+                        <coste_total moneda="EUR">1015.00</coste_total>
+                    </resumen_facturacion>
+                </detalle_estancia>
+            </reserva>
+        </reservas>
+    </hotel>
+</hotel_system>
