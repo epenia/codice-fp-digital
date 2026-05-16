@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Containerfile
+    volumes:
+      - ../:/workspace
+      - ~/.ssh:/home/devcontainer/.ssh:ro
+    ports:
+      - "0.0.0.0:4321:4321"
+    command: sleep infinity

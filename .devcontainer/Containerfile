@@ -1,0 +1,14 @@
+FROM node:lts-slim
+
+RUN apt update && apt install -y git zsh ca-certificates curl wget nano make
+
+RUN useradd -m -s /usr/bin/zsh devcontainer
+USER devcontainer
+
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+RUN sed -i 's/robbyrussell/kolo/' ~/.zshrc
+
+ENV HOST=0.0.0.0\
+	PORT=4321
+
+EXPOSE 4321

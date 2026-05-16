@@ -1,0 +1,72 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "name": "Codice FP Digital",
+  "dockerComposeFile": "compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "devcontainer",
+  "updateRemoteUserUID": true,
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "formulahendry.auto-rename-tag",
+        "pranaygp.vscode-css-peek",
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "ecmel.vscode-html-css",
+        "leizongmin.node-module-intellisense",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode",
+        "pflannery.vscode-versionlens",
+        "bradlc.vscode-tailwindcss",
+        "eamodio.gitlens",
+        "GitHub.copilot-chat"
+      ]
+    },
+    "settings": {
+      "files.watcherExclude": {
+        "**/node_modules/**": true
+      },
+      "editor.linkedEditing": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "files.associations": {
+        "*.svg": "html"
+      },
+      "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "astro",
+        "typescript",
+        "typescriptreact"
+      ],
+      "editor.insertSpaces": false,
+      "editor.detectIndentation": false,
+      "[astro]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "never"
+        }
+      },
+      "prettier.documentSelectors": ["**/*.astro"],
+      "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        "class:list"
+      ],
+      "editor.wordWrap": "on",
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "prettier.configPath": "/workspace/.prettierrc.json"
+    }
+  }
+}
