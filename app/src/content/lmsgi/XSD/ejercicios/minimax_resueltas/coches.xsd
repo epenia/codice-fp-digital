@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementName="catalogo_automocion" attributeFormDefault="qualified">
+
+    <!-- Cero o más marcas -->
+    <xs:element name="marca" maxOccurs="unbounded">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Nombre de marca obligatorio -->
+                <xs:element name="nombre" type="xs:string"/>
+                <!-- Logotipos obligatorios -->
+                <xs:element name="logotipos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="formato" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="formato" type="xs:string" use="required"/>
+                                    <xs:attribute name="color_primario" type="xs:string" use="required"/>
+                                    <xs:attribute name="historia" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Modelos obligatorios -->
+                <xs:element name="modelos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modelo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Atributos obligatorios del modelo -->
+                                        <xs:element name="potencia_cv">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:positiveInteger">
+                                                        <xs:attribute name="unidad" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="transmision">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="tipos_compatibles" type="xs:string" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="consumo_combustible">
+                                            <xs:complexType>
+                                                <xs:attribute name="ciudad_l/100km" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="autopista_l/100km" type="xs:decimal" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <!-- Equipamiento obligatorio -->
+                                        <xs:element name="sistema_infotainment">
+                                            <xs:complexType>
+                                                <xs:attribute name="marca_soporte" type="xs:string"/>
+                                                <xs:attribute name="conectividad" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="tecnologia_seguridad">
+                                            <xs:complexType>
+                                                <xs:attribute name="incluye" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="anio_inicio" type="xs:positiveInteger" use="required"/>
+                                    <xs:attribute name="anio_actual" type="xs:positiveInteger" use="required"/>
+                                    <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                    <xs:attribute name="motor_primario" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Color preferido opcional -->
+                <xs:element name="color_preferido" minOccurs="0">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="swatch" type="xs:string" use="required"/>
+                                <xs:attribute name="temporada" type="xs:string"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="pais" type="xs:string" use="required"/>
+            <xs:attribute name="dias_existen" type="xs:positiveInteger" use="required"/>
+            <xs:attribute name="estilo" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

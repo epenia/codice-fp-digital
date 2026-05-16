@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Elemento raíz con atributos obligatorios -->
+    <xs:element name="hotel_system">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Servicios globales obligatorios -->
+                <xs:element name="servicios_globales">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="servicio" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                    <xs:attribute name="coste_unidad" type="xs:string" use="required"/>
+                                    <xs:attribute name="periodo_servicio" type="xs:string" use="required"/>
+                                    <xs:attribute name="cobertura_habitacional" type="xs:string"/>
+                                    <xs:attribute name="inclusión_completa" type="xs:string"/>
+                                    <xs:attribute name="disponibilidad_minimas" type="xs:string"/>
+                                    <xs:attribute name="pago_anticipo_requerido" type="xs:string"/>
+                                    <xs:attribute name="soporte_dispositivos" type="xs:string"/>
+                                    <xs:attribute name="política_uso" type="xs:string"/>
+                                    <xs:attribute name="distancia_max_km" type="xs:string"/>
+                                    <xs:attribute name="coste_unidad_base" type="xs:string"/>
+                                    <xs:attribute name="restricciones" type="xs:string"/>
+                                    <xs:attribute name="Pago_automático" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <!-- Cero o más hoteles -->
+                <xs:element name="hotel" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Infraestructura obligatoria -->
+                            <xs:element name="infraestructura">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="departamento" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                                <xs:attribute name="horario_operativo" type="xs:string" use="required"/>
+                                                <xs:attribute name="gestionado_por" type="xs:string" use="required"/>
+                                                <xs:attribute name="personal_recursos" type="xs:string" use="required"/>
+                                                <xs:attribute name="capacidad_max_mesas" type="xs:integer"/>
+                                                <xs:attribute name="estilo_gastronomico" type="xs:string"/>
+                                                <xs:attribute name="capacidad_max_personas" type="xs:integer"/>
+                                                <xs:attribute name="equipo_audiovisual_disponible" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Tipos de habitación obligatorios -->
+                            <xs:element name="tipos_habitacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                                <xs:attribute name="descripcion" type="xs:string" use="required"/>
+                                                <xs:attribute name="base_familia" type="xs:string" use="required"/>
+                                                <xs:attribute name="capacidad_maxima" type="xs:positiveInteger" use="required"/>
+                                                <xs:attribute name="tarifa_base_minima" type="xs:decimal" use="required"/>
+                                                <xs:attribute name="equipamiento_base" type="xs:string"/>
+                                                <xs:attribute name="equipamiento_extra" type="xs:string"/>
+                                                <xs:attribute name="complementos_incluidos" type="xs:string"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Reservas opcionales -->
+                            <xs:element name="reservas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="reserva" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <!-- Cliente obligatorio -->
+                                                    <xs:element name="cliente">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="id" type="xs:string"/>
+                                                            <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                                            <xs:attribute name="email" type="xs:string" use="required"/>
+                                                            <xs:attribute name="descripcion_viaje" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <!-- Detalle de estancia obligatorio -->
+                                                    <xs:element name="detalle_estancia">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="habitacion">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="id_tipo" type="xs:string" use="required"/>
+                                                                        <xs:attribute name="num_asignada" type="xs:string" use="required"/>
+                                                                        <xs:attribute name="ocupantes_adultos" type="xs:integer" use="required"/>
+                                                                        <xs:attribute name="ocupantes_niños" type="xs:integer"/>
+                                                                        <xs:attribute name="tipo_reserva" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="servicios_extra_detalles">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="servicio" maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute name="ref_id" type="xs:string"/>
+                                                                                    <xs:attribute name="cantidad" type="xs:positiveInteger"/>
+                                                                                    <xs:attribute name="costo_extra" type="xs:string" use="required"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="concepto_adicional">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute name="nombre" type="xs:string"/>
+                                                                                    <xs:attribute name="unidad" type="xs:string"/>
+                                                                                    <xs:attribute name="costo_extra" type="xs:string" use="required"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <!-- Resumen de facturación obligatorio -->
+                                                                <xs:element name="resumen_facturacion">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="subtotal_estadia">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute name="moneda" type="xs:string"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="impuesto_turistico">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute name="tipo" type="xs:string"/>
+                                                                                    <xs:attribute name="tasa" type="xs:string"/>
+                                                                                    <xs:attribute name="monto_impuesto" type="xs:string"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="coste_total">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute name="moneda" type="xs:string"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                <xs:attribute name="fecha_checkin" type="xs:date" use="required"/>
+                                                <xs:attribute name="fecha_checkout" type="xs:date" use="required"/>
+                                                <xs:attribute name="estado_pago" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        <xs:attribute name="clasificacion" use="required"/>
+                        <xs:attribute name="capacidad_maxima_personas" type="xs:positiveInteger" use="required"/>
+                        <xs:attribute name="ubicacion_ciudad" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="sistema_gestion" type="xs:string" use="required"/>
+            <xs:attribute name="fecha_revision" type="xs:date" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

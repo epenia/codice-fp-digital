@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Elemento raíz con atributos obligatorios -->
+    <xs:element name="catalog">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Cero o más bandas -->
+                <xs:element name="band" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Miembros obligatorios -->
+                            <xs:element name="membreros">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="miembro" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                                <xs:attribute name="rol" type="xs:string" use="required"/>
+                                                <xs:attribute name="activo" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Discográfica obligatoria -->
+                            <xs:element name="disquera">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="album" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <!-- Canciones (0 o más) -->
+                                                    <xs:element name="canción" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="compositor">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="fuente" type="xs:string"/>
+                                                                        <xs:attribute name="notas_destacadas" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="estilo">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="tiempo_sugerido" type="xs:string"/>
+                                                                        <xs:attribute name="complejidad" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="instrumentacion">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="sección" type="xs:string"/>
+                                                                        <xs:attribute name="nivel" type="xs:string"/>
+                                                                        <xs:attribute name="tipo" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="metadata_musical">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                                                                        <xs:attribute name="escala" type="xs:string"/>
+                                                                        <xs:attribute name="tiempo_bpm" type="xs:string"/>
+                                                                        <xs:attribute name="etiqueta" type="xs:string"/>
+                                                                        <xs:attribute name="secciones" type="xs:string"/>
+                                                                        <xs:attribute name="detalle" type="xs:string"/>
+                                                                        <xs:attribute name="complejidad_sonora" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="estructura_musical">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="tipo" type="xs:string"/>
+                                                                        <xs:attribute name="secciones" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="elementos_sonoros">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="detalle" type="xs:string"/>
+                                                                        <xs:attribute name="complejidad_sonora" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="id" type="xs:string" use="required"/>
+                                                            <xs:attribute name="titulo" type="xs:string" use="required"/>
+                                                            <xs:attribute name="duracion_min" type="xs:decimal" use="required"/>
+                                                            <xs:attribute name="hit_single" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="id" type="xs:string" use="required"/>
+                                                <xs:attribute name="titulo" type="xs:string" use="required"/>
+                                                <xs:attribute name="anio" type="xs:positiveInteger" use="required"/>
+                                                <xs:attribute name="productor" type="xs:string" use="required"/>
+                                                <xs:attribute name="formato_original" type="xs:string" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="principal" type="xs:string"/>
+                                    <xs:attribute name="fondo_catalogo" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Gira destacada opcional -->
+                            <xs:element name="gira_destacada" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="contenido_técnico">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="numero_canciones">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="cantidad" type="xs:integer" use="required"/>
+                                                            <xs:attribute name="repertorio_min" type="xs:integer"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="dispositivo_grabacion">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="tipo" type="xs:string"/>
+                                                            <xs:attribute name="calidad_sonido" type="xs:string"/>
+                                                            <xs:attribute name="máx_canales" type="xs:integer"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="tiempo_total_horas">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="duracion" type="xs:decimal"/>
+                                                            <xs:attribute name="duración_estimada_hrs" type="xs:decimal"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="audiencia_estimada">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="cantidad" type="xs:integer"/>
+                                                            <xs:attribute name="tipo" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="anio_fecha" type="xs:string"/>
+                                    <xs:attribute name="ubicacion" type="xs:string" use="required"/>
+                                    <xs:attribute name="nota_histórica" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        <xs:attribute name="genero" type="xs:string" use="required"/>
+                        <xs:attribute name="fundadores" type="xs:string" use="required"/>
+                        <xs:attribute name="activo" type="xs:string" use="required"/>
+                        <xs:attribute name="trayectoria_anos" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="periodo_historico_music" type="xs:string" use="required"/>
+            <xs:attribute name="genero_predominante" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

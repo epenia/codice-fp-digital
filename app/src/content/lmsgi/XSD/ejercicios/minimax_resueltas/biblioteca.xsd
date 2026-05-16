@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementName="biblioteca" attributeFormDefault="qualified">
+
+    <!-- Elemento raíz con atributos obligatorios -->
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Elemento tarea_bibliografica obligatorio con atributos -->
+                <xs:element name="tarea_bibliografica">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Cero o más elementos libro -->
+                            <xs:element name="libro" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Metadatos del libro (todos obligatorios) -->
+                                        <xs:element name="metadatos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="titulo" type="xs:string"/>
+                                                    <xs:element name="gerenre_principal">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="id" type="xs:string" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="generes_secundarios">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="genero_secundario" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="prioridad" use="required"/>
+                                                                        <xs:attribute name="etiqueta" type="xs:string" use="required"/>
+                                                                        <xs:attribute name="grado_temático" type="xs:string" use="required"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="publicacion">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="anio" type="xs:positiveInteger" use="required"/>
+                                                            <xs:attribute name="editorial" type="xs:string" use="required"/>
+                                                            <xs:attribute name="tirada_estimada" type="xs:nonNegativeInteger" use="required"/>
+                                                            <xs:attribute name="formato_físico" type="xs:string" use="required"/>
+                                                            <xs:attribute name="formato_electrónico" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <!-- Estructura del contenido -->
+                                        <xs:element name="estructura_contenido">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="pagine_estimadas">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="pagina_rango" type="xs:string"/>
+                                                            <xs:attribute name="pausas_personales_recomendadas" type="xs:string"/>
+                                                            <xs:attribute name="formato_digital" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="tema_central">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="capitulo" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="numero_inicio" type="xs:nonNegativeInteger" use="required"/>
+                                                                        <xs:attribute name="numero_fin" type="xs:nonNegativeInteger" use="required"/>
+                                                                        <xs:attribute name="titulo_general" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="indices_clave">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="indice" maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute name="tema" type="xs:string" use="required"/>
+                                                                                    <xs:attribute name="aparece_capitulos" type="xs:string" use="required"/>
+                                                                                    <xs:attribute name="importancia" type="xs:string" use="required"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="tema_clave" type="xs:string"/>
+                                                            <xs:attribute name="complejidad_conceptual" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <!-- Autorías: cero o más autores -->
+                                        <xs:element name="autorias">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="autor" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="obra_destacada">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="idioma_ejemplo" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="tema_principal" type="xs:string"/>
+                                                                <xs:element name="biografia_breve">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="pagina_referencia" type="xs:positiveInteger"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="colaboraciones">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="colab" maxOccurs="unbounded">
+                                                                                <xs:complexType>
+                                                                                    <xs:attribute name="colaborador" type="xs:string"/>
+                                                                                    <xs:attribute name="tipo" type="xs:string"/>
+                                                                                    <xs:attribute name="nivel_afinidad" type="xs:string"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="id_autor" type="xs:string" use="required"/>
+                                                            <xs:attribute name="nombre" type="xs:string"/>
+                                                            <xs:attribute name="nacionalidad" type="xs:string"/>
+                                                            <xs:attribute name="nacimientos" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="isbn" type="xs:string" use="required"/>
+                                    <xs:attribute name="isbn_tipo" type="xs:string" use="required"/>
+                                    <xs:attribute name="isbn_valido" type="xs:string" use="required"/>
+                                    <xs:attribute name="idioma_original" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tarea_id" type="xs:string" use="required"/>
+                        <xs:attribute name="tipo" use="required"/>
+                        <xs:attribute name="estado" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="catalogo_general" type="xs:string" use="required"/>
+            <xs:attribute name="fecha_última_actualización" type="xs:date" use="required"/>
+            <xs:attribute name="bibliotecario" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
