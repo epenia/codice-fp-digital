@@ -1,42 +1,28 @@
 ## Introducción a XQuery
 
-Base XML
+Abrimos el programa y los organizamos en VIEW para ver solo este par de partes
 
-<!-- ![base_xml](./images/xml-base.png) -->
 
----
-
-## ¿Qué es XQuery?
-
-**XQuery** es un lenguaje de consulta diseñado para extraer y manipular datos de documentos XML. Es al XML lo que SQL es a las bases de datos relacionales.
-
-| **Característica**    | **Descripción**                                    |
-| --------------------- | -------------------------------------------------- |
-| **Función principal** | Consultar y transformar documentos XML             |
-| **Sintaxis**          | Similar a SQL, basada en expresiones FLWOR         |
-| **Estándar**          | W3C Recommendation                                 |
-| **Motor**             | eXist-db, BaseX, Saxon, MarkLogic                  |
-| **XPath integrado**   | XQuery utiliza XPath para navegar por el árbol XML |
+![base_xml](images/xquery_3.png) 
 
 ---
 
-## Crear archivo XQuery
+Entonces abrimos un XML ya existente y creamos un nuevo doc .xq
 
-<!-- ![crear_xquery_1](./images/crear_xquery_1.png) -->
-
----
-
-<!-- ![crear_xquery_2](./images/crear_xquery_2.png) -->
+![base_xml](images/xquery_2.png)
+> La primero línea que vemos en este .xq es importante
 
 ---
 
-<!-- ![guardar_xquery_1](./images/guardar_xquery_1.png) -->
+Para hacer funcionar las consultas es dandole al PLAY
+
+![base_xml](images/xquery_1.png)
 
 ---
 
 ## Expresiones FLWOR
 
-FLWOR es el acrónimo de **For-Let-Where-Order-Return**, la estructura principal de XQuery.
+> FLWOR es el acrónimo de **For-Let-Where-Order-Return**, la estructura principal de XQuery.
 
 | **Cláusula** | **Descripción**                            | **Ejemplo**                         |
 | ------------ | ------------------------------------------ | ----------------------------------- |
@@ -47,6 +33,13 @@ FLWOR es el acrónimo de **For-Let-Where-Order-Return**, la estructura principal
 | **RETURN**   | Especifica qué devolver por cada iteración | `return $alumno/nombre`             |
 
 ### Ejemplo básico FLWOR
+
+> Significado de la siglas F L W O R
+> F = For
+> L = Let
+> W = Where
+> O = Order by
+> R = Return
 
 ```xquery
 for $alumno in /escuela/alumnos/alumno
@@ -352,110 +345,6 @@ return
     <nombre>{concat($alumno/nombre, " ", $alumno/apellidos)}</nombre>
     <edad>{$alumno/edad}</edad>
   </resultado>
-```
-
----
-
-### Ejemplo 5: Join entre documentos
-
-```xquery
-(: Combinar datos de alumnos con sus calificaciones :)
-for $alumno in doc("alumnos.xml")/alumnos/alumno
-let $calif := doc("calificaciones.xml")/calificaciones/calificacion[@id = $alumno/@id]
-where exists($calif)
-return
-  <resultado>
-    {$alumno/nombre}
-    <calificacion_final>{$calif/nota_final}</calificacion_final>
-    <observaciones>{$calif/observaciones/text()}</observaciones>
-  </resultado>
-```
-
----
-
-## Funciones definidas por el usuario
-
-### Sintaxis
-
-```xquery
-declare function local:nombre_funcion($param1 as tipo1, $param2 as tipo2) as tipo_retorno
-{
-  (: cuerpo de la función :)
-  let $resultado := $param1 + $param2
-  return $resultado
-};
-```
-
-### Ejemplo práctico
-
-```xquery
-(: Función para calcular si un alumno aprueba :)
-declare function local:estado_aprobado($nota as xs:decimal) as xs:string
-{
-  if ($nota >= 9) then "Sobresaliente"
-  else if ($nota >= 7) then "Notable"
-  else if ($nota >= 5) then "Aprobado"
-  else "Suspenso"
-};
-
-(: Usar la función :)
-for $alumno in doc("escuela.xml")/escuela/alumnos/alumno
-return
-  <resultado>
-    <nombre>{$alumno/nombre}</nombre>
-    <nota>{$alumno/nota}</nota>
-    <estado>{local:estado_aprobado($alumno/nota)}</estado>
-  </resultado>
-```
-
-### Funciones recursivas
-
-```xquery
-(: Función recursiva para factorial :)
-declare function local:factorial($n as xs:integer) as xs:integer
-{
-  if ($n <= 1) then 1
-  else $n * local:factorial($n - 1)
-};
-
-(: Función recursiva para fibonacci :)
-declare function local:fibonacci($n as xs:integer) as xs:integer
-{
-  if ($n <= 1) then $n
-  else local:fibonacci($n - 1) + local:fibonacci($n - 2)
-};
-```
-
----
-
-## Módulos XQuery
-
-### Importar módulos
-
-```xquery
-import module namespace funcs = "http://example.com/funciones";
-
-(: Usar función del módulo :)
-funcs:formatearFecha(current-date())
-```
-
-### Declarar módulo
-
-```xquery
-(: En archivo modulos/fechas.xqm :)
-module namespace fechas = "http://example.com/funciones";
-
-declare function fechas:formatearFecha($fecha as xs:date) as xs:string
-{
-  concat(day-from-date($fecha), "/",
-         month-from-date($fecha), "/",
-         year-from-date($fecha))
-};
-
-declare function fechas:diasEntre($fecha1 as xs:date, $fecha2 as xs:date) as xs:integer
-{
-  days-from-duration($fecha2 - $fecha1)
-};
 ```
 
 ---

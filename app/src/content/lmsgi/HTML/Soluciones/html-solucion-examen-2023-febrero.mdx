@@ -1,0 +1,232 @@
+---
+title: "Solución Examen HTML 2023 - Star Wars: Andor"
+description: "Solución detallada paso a paso del examen de HTML de febrero de 2023"
+---
+
+import HtmlCodeSnippet from '../../../../components/HtmlCodeSnippet.astro';
+import codigoBase from "../../../../codigo/html-base.html?raw";
+import html2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/index.html?raw";
+import css2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/style.css?raw";
+import cartel2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/cartel.jpg?url";
+import icono2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/icono.png?url";
+import font2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/Starwars.ttf?url";
+import ResultImage from '../../../../components/ResultImage.astro';
+
+# Solución Examen HTML - Febrero 2023
+
+## Enunciado
+
+Diseñar una página web sobre la serie **Star Wars: Andor** cumpliendo las siguientes características:
+
+- La letra del párrafo es "Tahoma" un 50% más grande.
+- Los párrafos separados entre sí a 1.5 em.
+- El texto está justificado.
+- Todos los estilos en un archivo externo CSS.
+- La imagen tendrá borde redondeado y sombra, color DarkGreen, orientada a la derecha.
+- El reparto se mostrará utilizando iconos como viñetas.
+- La palabra "Reparto" estará centrada verticalmente respecto a las dos viñetas.
+- El título tendrá color "DarkGreen" y sombra amarilla.
+- El color de fondo es "Aqua" y el del texto es "Navy".
+- El recuadro del título será de color negro, con bordes redondeados.
+- La imagen será un enlace a la Wikipedia de "Andor" en una solapa nueva.
+
+---
+
+## Paso 1: Estructura HTML
+
+Primero creamos el documento HTML con la estructura semántica adecuada:
+
+- `<header>`: Contiene el título principal de la página.
+- `<main>`: Agrupa el contenido principal.
+- Una imagen flotante a la derecha que actúa como enlace externo.
+- Varios párrafos con el texto proporcionado.
+- `<section class="reparto">`: Contiene la lista del reparto con la palabra "Reparto" alineada verticalmente.
+
+### Elementos clave:
+- Uso de `target="_blank"` y `rel="noopener noreferrer"` para abrir el enlace de Wikipedia en una nueva pestaña de forma segura.
+- La imagen utiliza la ruta relativa `cartel.jpg`.
+- La lista del reparto utiliza `list-style-image` para personalizar las viñetas.
+
+<HtmlCodeSnippet
+  html={html2023}
+  css={css2023}
+  assets={{
+    'cartel.jpg': cartel2023,
+    'icono.png': icono2023,
+    'Starwars.ttf': font2023,
+  }}
+/>
+
+> **Nota:** El código completo se encuentra en `app/src/codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/index.html`
+
+---
+
+## Paso 2: Estilos CSS externos
+
+Creamos el archivo `style.css` con todas las reglas solicitadas:
+
+### 2.1 Fuente personalizada
+
+El examen proporciona una fuente `Starwars.ttf`. La cargamos con `@font-face` para usarla en el título:
+
+```css
+@font-face {
+    font-family: 'StarWars';
+    src: url('Starwars.ttf') format('truetype');
+}
+```
+
+### 2.2 Fondo y texto general
+
+```css
+body {
+    background-color: Aqua;
+    color: Navy;
+    font-family: Tahoma, sans-serif;
+    font-size: 150%; /* 50% más grande que el tamaño base */
+    margin: 0;
+    padding: 20px;
+}
+```
+
+- `background-color: Aqua` → Color de fondo Aqua.
+- `color: Navy` → Color del texto Navy.
+- `font-family: Tahoma, sans-serif` → Fuente Tahoma con alternativa sans-serif.
+- `font-size: 150%` → Tamaño un 50% más grande (100% base + 50%).
+
+### 2.3 Recuadro del título
+
+```css
+header {
+    border: 4px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+- `border: 4px solid black` → Borde negro grueso.
+- `border-radius: 15px` → Bordes redondeados.
+- `text-align: center` → Centra el contenido.
+
+### 2.4 Estilo del título
+
+```css
+header h1,
+header h2 {
+    font-family: 'StarWars', sans-serif;
+    color: DarkGreen;
+    text-shadow: 2px 2px 4px yellow;
+    margin: 0;
+}
+```
+
+- `color: DarkGreen` → Color del texto DarkGreen.
+- `text-shadow: 2px 2px 4px yellow` → Sombra amarilla desplazada 2px horizontal y vertical, con 4px de desenfoque.
+
+### 2.5 Párrafos
+
+```css
+p {
+    text-align: justify;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+```
+
+- `text-align: justify` → Texto justificado.
+- `margin-bottom: 1.5em` → Separación de 1.5em entre párrafos.
+
+### 2.6 Imagen
+
+```css
+img {
+    float: right;
+    width: 250px;
+    height: auto;
+    margin: 0 0 15px 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px DarkGreen;
+    transition: transform 0.3s;
+}
+```
+
+- `float: right` → La imagen flota a la derecha y el texto la rodea.
+- `border-radius: 15px` → Bordes redondeados.
+- `box-shadow: 5px 5px 15px DarkGreen` → Sombra verde oscuro.
+
+### 2.7 Sección Reparto
+
+```css
+.reparto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    clear: both;
+}
+
+.reparto ul {
+    list-style-image: url('icono.png');
+    margin: 0;
+    padding-left: 40px;
+}
+```
+
+- `display: flex` y `align-items: center` → Centran verticalmente "Reparto" con la lista.
+- `list-style-image: url('icono.png')` → Usa el icono proporcionado como viñeta.
+- `clear: both` → Evita que el float de la imagen afecte al reparto.
+
+<HtmlCodeSnippet
+  html={html2023}
+  css={css2023}
+  assets={{
+    'cartel.jpg': cartel2023,
+    'icono.png': icono2023,
+    'Starwars.ttf': font2023,
+  }}
+/>
+
+---
+
+## Resultado Esperado
+
+<ResultImage src="/app/src/content/lmsgi/HTML/Examenes/images/examen_2023.png" alt="Resultado esperado del examen 2023" />
+
+---
+
+## Archivos de la solución
+
+La solución completa se encuentra en:
+
+- `app/src/codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/index.html`
+- `app/src/codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/style.css`
+
+Recursos necesarios (copiados desde el directorio del examen):
+- `cartel.jpg` → Imagen del cartel de Andor
+- `icono.png` → Icono para las viñetas del reparto
+- `Starwars.ttf` → Fuente personalizada para el título
+
+---
+
+## Resumen de conceptos aplicados
+
+| Concepto | Implementación |
+|----------|---------------|
+| CSS externo | `<link rel="stylesheet" href="style.css">` |
+| Color de fondo | `background-color: Aqua` |
+| Color de texto | `color: Navy` |
+| Fuente personalizada | `@font-face` con `Starwars.ttf` |
+| Tamaño de fuente | `font-size: 150%` |
+| Texto justificado | `text-align: justify` |
+| Separación párrafos | `margin-bottom: 1.5em` |
+| Bordes redondeados | `border-radius: 15px` |
+| Sombra | `box-shadow` y `text-shadow` |
+| Float | `float: right` para la imagen |
+| Flexbox | `display: flex` para alinear reparto |
+| Enlace externo | `target="_blank"` + `rel="noopener noreferrer"` |
+| Viñetas personalizadas | `list-style-image` |

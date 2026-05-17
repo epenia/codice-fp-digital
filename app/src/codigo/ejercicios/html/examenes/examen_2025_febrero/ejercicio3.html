@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta 4 - Formulario</title>
+    <style>
+        body {
+            background-color: #E6E6FA;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 200px;
+            padding: 3px;
+            font-size: 1rem;
+        }
+
+        .botones {
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 5px 15px;
+            font-size: 1rem;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .info {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pregunta 4</h1>
+
+    <form action="mailto:examenLMSGI@examen.org" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+
+        <div class="botones">
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+
+    <p class="info">Pulsa el boton de "Limpiar" para borrar el formulario, o el boton de "Enviar" para acceder.</p>
+</body>
+
+</html>

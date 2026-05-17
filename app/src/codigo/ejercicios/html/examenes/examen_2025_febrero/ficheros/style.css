@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('Starwars.ttf') format('truetype');
+}
+
+/* ============================
+   ESTILOS COMUNES
+   ============================ */
+body {
+    background-color: lightgreen;
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ============================
+   EJERCICIO 1 - PÁGINA PRINCIPAL
+   ============================ */
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+.titulo-principal {
+    border: 8px solid white;
+    border-radius: 20px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.titulo-principal legend {
+    font-family: 'StarWars', sans-serif;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.titulo-principal h1 {
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    font-family: 'StarWars', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenido img {
+    float: right;
+    width: 180px;
+    height: auto;
+    margin: 0 0 15px 15px;
+    border-radius: 10px;
+    border: 2px solid darkgreen;
+    padding: 5px;
+    box-shadow: -5px 5px 10px darkgreen;
+}
+
+.contenido p {
+    text-align: justify;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    clear: both;
+}
+
+.boton-reparto {
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 1.1rem;
+}
+
+.boton-reparto:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   EJERCICIO 2 - REPARTO
+   ============================ */
+.pagina-reparto {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imagen-central {
+    margin-bottom: 30px;
+}
+
+.imagen-central img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px darkgreen;
+    transition: box-shadow 0.3s;
+}
+
+.imagen-central a:hover img {
+    box-shadow: 5px 5px 10px black;
+}
+
+.protagonistas {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px dotted darkgreen;
+    padding: 20px;
+}
+
+.protagonistas h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.protagonistas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.protagonistas li {
+    font-size: 1.1rem;
+}

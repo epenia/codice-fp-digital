@@ -1,6 +1,9 @@
 ## Introducción a XSL
 
-Creacion de XML BASE
+Creación de XML BASE
+
+> **IMPORTANTE:** `<?xml-stylesheet type="text/xsl" href="EJEMPLO.xsl"?>`
+
 
 ![base_xml](./images/xml-base-para-xsl.png)
 

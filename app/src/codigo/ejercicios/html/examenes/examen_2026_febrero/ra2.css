@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('Starwars.ttf') format('truetype');
+}
+
+/* ============================
+   CONFIGURACIÓN GENERAL
+   ============================ */
+body {
+    background-color: lightblue;
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 140%;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ============================
+   CABECERA
+   ============================ */
+.cabecera-principal {
+    border: 8px solid white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cabecera-principal h1 {
+    font-family: 'StarWars', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.cabecera-principal h2 {
+    font-family: 'StarWars', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    margin: 5px 0 0 0;
+    font-size: 2.2rem;
+}
+
+/* ============================
+   LAYOUT PRINCIPAL
+   ============================ */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fila-superior {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.columna-izquierda,
+.columna-derecha {
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* ============================
+   IMÁGENES
+   ============================ */
+.imagen-flotante {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid darkblue;
+    padding: 5px;
+    background-color: white;
+}
+
+.imagen-flotante.izquierda {
+    float: left;
+    margin: 0 15px 10px 0;
+    box-shadow: 5px 5px 10px darkblue;
+}
+
+.imagen-flotante.derecha {
+    float: right;
+    margin: 0 0 10px 15px;
+    box-shadow: -5px 5px 10px darkblue;
+}
+
+/* ============================
+   TEXTOS
+   ============================ */
+p {
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+
+.texto-con-logo {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ============================
+   FILA INFERIOR
+   ============================ */
+.fila-inferior {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bloque-reparto,
+.bloque-premisa {
+    flex: 1;
+    min-width: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo atenuado con el logo */
+.bloque-reparto::before,
+.bloque-premisa::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('Logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bloque-reparto > *,
+.bloque-premisa > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bloque-reparto h3,
+.bloque-premisa h3 {
+    font-family: 'StarWars', sans-serif;
+    color: darkblue;
+    text-shadow: 1px 1px 2px white;
+    margin-top: 0;
+    text-align: center;
+}
+
+.bloque-reparto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.bloque-reparto li {
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+/* ============================
+   PIE DE PÁGINA
+   ============================ */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+}

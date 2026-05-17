@@ -1,0 +1,444 @@
+---
+title: "Solución Examen HTML 2025 - Star Wars: Tripulación Perdida"
+description: "Solución detallada paso a paso del examen de HTML de febrero de 2025"
+---
+
+import HtmlCodeSnippet from '../../../../components/HtmlCodeSnippet.astro';
+import html2025ej1 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ejercicio1.html?raw";
+import html2025ej2 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ejercicio2.html?raw";
+import html2025ej3 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ejercicio3.html?raw";
+import css2025 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/style.css?raw";
+import cartel2025 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/cartel.jpg?url";
+import cartel2b2025 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/cartel2.jpg?url";
+import logo2025 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/Logo.png?url";
+import font2025 from "../../../../codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/Starwars.ttf?url";
+import ResultImage from '../../../../components/ResultImage.astro';
+
+# Solución Examen HTML - Febrero 2025
+
+## Ejercicio 1: Página Principal (5 puntos)
+
+Diseñar una página web sobre la serie **Star Wars: Tripulación Perdida** (Skeleton Crew).
+
+### Características solicitadas:
+
+- Fondo: Lightgreen
+- Fuente párrafos: Tahoma, 25% más grande
+- Texto justificado
+- CSS externo
+- Imagen: borde redondeado, sombra Darkgreen, con marco, texto la rodea
+- Título: White con sombra Black
+- Recuadro título: White, 8px, redondeado, con leyenda "STAR WARS"
+- Enlace "Reparto" abre Ejercicio2.html en ventana nueva
+- Maquetación lo más parecida posible a la captura
+
+---
+
+### Paso 1: Estructura HTML del Ejercicio 1
+
+Creamos `ejercicio1.html` con la siguiente estructura semántica:
+
+- `<header>`: Contiene el logo y el título principal dentro de un `<fieldset>` con `<legend>`.
+- `<main>`: Contiene la sección de contenido con la imagen flotante y los párrafos.
+- `<footer>`: Contiene el enlace a la página de reparto.
+
+#### Elementos clave:
+- El título utiliza `<fieldset>` y `<legend>` para crear el recuadro con la leyenda "STAR WARS".
+- La imagen utiliza `float: right` para que el texto la rodee.
+- El enlace "Reparto" usa `target="_blank"` para abrir en una nueva ventana.
+
+<HtmlCodeSnippet
+  html={html2025ej1}
+  css={css2025}
+  assets={{
+    'Logo.png': logo2025,
+    'cartel.jpg': cartel2025,
+    'Starwars.ttf': font2025,
+  }}
+/>
+
+---
+
+### Paso 2: CSS del Ejercicio 1
+
+El archivo `style.css` se comparte entre el Ejercicio 1 y el Ejercicio 2 (ambos tienen fondo Lightgreen y elementos comunes).
+
+#### 2.1 Fuente personalizada
+
+```css
+@font-face {
+    font-family: 'StarWars';
+    src: url('Starwars.ttf') format('truetype');
+}
+```
+
+#### 2.2 Estilos generales
+
+```css
+body {
+    background-color: lightgreen;
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+```
+
+#### 2.3 Cabecera con logo y título
+
+```css
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+}
+```
+
+- `display: flex` alinea horizontalmente el logo y el título.
+- `align-items: flex-start` alinea ambos elementos por la parte superior.
+
+#### 2.4 Recuadro del título con leyenda
+
+```css
+.titulo-principal {
+    border: 8px solid white;
+    border-radius: 20px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.titulo-principal legend {
+    font-family: 'StarWars', sans-serif;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.titulo-principal h1 {
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    font-family: 'StarWars', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+```
+
+- `<fieldset>` crea automáticamente el recuadro.
+- `<legend>` posiciona el texto "STAR WARS" en la parte superior del borde.
+- `border: 8px solid white` cumple con el grosor y color solicitado.
+- `text-shadow: 3px 3px 5px black` aplica la sombra negra al título.
+
+#### 2.5 Imagen con marco y sombra
+
+```css
+.contenido img {
+    float: right;
+    width: 180px;
+    height: auto;
+    margin: 0 0 15px 15px;
+    border-radius: 10px;
+    border: 2px solid darkgreen;
+    padding: 5px;
+    box-shadow: -5px 5px 10px darkgreen;
+}
+```
+
+- `float: right` hace que el texto rodee la imagen.
+- `border: 2px solid darkgreen` crea el marco alrededor de la imagen.
+- `padding: 5px` separa ligeramente la imagen de su borde.
+- `box-shadow: -5px 5px 10px darkgreen` → Sombra hacia la izquierda y abajo.
+
+#### 2.6 Párrafos
+
+```css
+.contenido p {
+    text-align: justify;
+    font-size: 1.25rem; /* 25% más grande */
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+```
+
+- `font-size: 1.25rem` equivale al 125% del tamaño base (25% más grande).
+
+#### 2.7 Botón Reparto
+
+```css
+.boton-reparto {
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 1.1rem;
+}
+
+.boton-reparto:hover {
+    text-decoration: underline;
+}
+```
+
+- Se estiliza como un botón pero manteniendo la semántica de enlace (`<a>`).
+- `target="_blank"` en el HTML abre en nueva ventana.
+
+---
+
+## Ejercicio 2: Página de Reparto
+
+### Características solicitadas:
+
+- Fondo: Lightgreen
+- Imagen centrada, ajustada al tamaño de la captura, con sombra
+- Protagonistas ordenados en 3 columnas
+- Recuadro centrado, 80% de anchura, con borde punteado
+- Imagen del cartel es enlace a Wikipedia en nueva solapa
+
+---
+
+### Paso 1: Estructura HTML del Ejercicio 2
+
+```html
+<main class="pagina-reparto">
+    <header class="imagen-central">
+        <a href="https://es.wikipedia.org/wiki/Star_Wars:_Skeleton_Crew" target="_blank" rel="noopener noreferrer">
+            <img src="cartel2.jpg" alt="Cartel 2 de Star Wars: Tripulación Perdida">
+        </a>
+    </header>
+    <section class="protagonistas">
+        <h2>Protagonistas</h2>
+        <ul>
+            <li>Jude Law como Jod Na Nawood</li>
+            <!-- ... resto de protagonistas ... -->
+        </ul>
+    </section>
+</main>
+```
+
+---
+
+### Paso 2: CSS del Ejercicio 2
+
+#### 2.1 Imagen central con sombra
+
+```css
+.imagen-central {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.imagen-central img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px darkgreen;
+    transition: box-shadow 0.3s;
+}
+
+.imagen-central a:hover img {
+    box-shadow: 5px 5px 10px black;
+}
+```
+
+- `text-align: center` centra la imagen dentro de su contenedor.
+- `box-shadow: 5px 5px 10px darkgreen` → Sombra hacia la derecha y abajo.
+- `:hover` cambia la sombra a negro al pasar el ratón.
+
+#### 2.2 Lista de protagonistas en 3 columnas
+
+```css
+.protagonistas {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px dotted darkgreen;
+    padding: 20px;
+}
+
+.protagonistas h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.protagonistas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+```
+
+- `width: 80%` → Ocupa el 80% de la anchura de la pantalla.
+- `margin: 0 auto` → Centra el recuadro horizontalmente.
+- `border: 3px dotted darkgreen` → Borde punteado verde oscuro.
+- `display: grid` y `grid-template-columns: 1fr 1fr 1fr` → Crea 3 columnas iguales.
+
+<HtmlCodeSnippet
+  html={html2025ej2}
+  css={css2025}
+  assets={{
+    'cartel2.jpg': cartel2b2025,
+    'Starwars.ttf': font2025,
+  }}
+/>
+
+---
+
+## Ejercicio 3: Formulario (1 punto)
+
+### Características solicitadas:
+
+- Al pulsar "Enviar", enviar por correo a: examenLMSGI@examen.org
+- Campo de contraseña: tipo `password` (no muestra caracteres legibles)
+- Maquetación lo más parecida posible a la captura
+
+---
+
+### Paso 1: Estructura HTML del Ejercicio 3
+
+```html
+<form action="mailto:examenLMSGI@examen.org" method="post" enctype="text/plain">
+    <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+    </div>
+    <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+    </div>
+    <div class="botones">
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar">
+    </div>
+</form>
+```
+
+#### Elementos clave:
+- `action="mailto:examenLMSGI@examen.org"` → Abre el cliente de correo con la dirección destino.
+- `method="post"` → Método POST para el envío.
+- `enctype="text/plain"` → Codificación en texto plano.
+- `type="password"` → Oculta los caracteres introducidos.
+- `type="reset"` → Limpia todos los campos del formulario.
+
+---
+
+### Paso 2: CSS del Ejercicio 3
+
+```css
+body {
+    background-color: #E6E6FA; /* Lavanda claro */
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    padding: 3px;
+    font-size: 1rem;
+}
+
+.botones {
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 5px 15px;
+    font-size: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+```
+
+<HtmlCodeSnippet
+  html={html2025ej3}
+/>
+
+---
+
+## Resultados Esperados
+
+### Ejercicio 1
+
+<ResultImage src="../Examenes/images/examen_2025.png" alt="Resultado esperado del ejercicio 1 - 2025" />
+
+### Ejercicio 2
+
+<ResultImage src="../Examenes/images/examen_2025_2.png" alt="Resultado esperado del ejercicio 2 - 2025" />
+
+### Ejercicio 3
+
+<ResultImage src="../Examenes/images/examen_2025_3.png" alt="Resultado esperado del ejercicio 3 - 2025" />
+
+---
+
+## Archivos de la solución
+
+La solución completa se encuentra en:
+
+- `app/src/codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/ejercicio1.html`
+- `app/src/codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/ejercicio2.html`
+- `app/src/codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/ejercicio3.html`
+- `app/src/codigo/ejercicios/html/examenes/examen_2025_febrero/ficheros/style.css`
+
+Recursos necesarios:
+- `Logo.png` → Logo de Star Wars
+- `cartel.jpg` → Cartel principal
+- `cartel2.jpg` → Cartel secundario para el reparto
+- `Starwars.ttf` → Fuente personalizada
+
+---
+
+## Resumen de conceptos aplicados
+
+| Ejercicio | Concepto | Implementación |
+|-----------|----------|---------------|
+| 1 | CSS externo | `<link rel="stylesheet" href="style.css">` |
+| 1 | Float | `float: right` para la imagen |
+| 1 | Fieldset/Legend | Recuadro con leyenda "STAR WARS" |
+| 1 | Sombra texto | `text-shadow: 3px 3px 5px black` |
+| 1 | Sombra caja | `box-shadow: -5px 5px 10px darkgreen` |
+| 1 | Enlace externo | `target="_blank"` |
+| 2 | Grid | `grid-template-columns: 1fr 1fr 1fr` |
+| 2 | Borde punteado | `border: 3px dotted darkgreen` |
+| 2 | Centrado | `margin: 0 auto` + `width: 80%` |
+| 3 | Formulario mailto | `action="mailto:..."` |
+| 3 | Campo password | `type="password"` |
+| 3 | Botón reset | `type="reset"` |
+| 3 | Flexbox centrado | `display: flex` + `align-items: center` |
