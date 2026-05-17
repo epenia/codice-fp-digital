@@ -1,0 +1,45 @@
+---
+import { Code } from "astro:components";
+
+interface Props {
+  xsl: string;
+  label?: string;
+}
+
+const { xsl, label = "XSL" } = Astro.props;
+---
+
+<div class="xsl-snippet">
+  <div class="label">{label}</div>
+  <div class="scroll-wrapper">
+    <Code code={xsl} lang="xml" theme="github-light" />
+  </div>
+</div>
+
+<style>
+  .xsl-snippet {
+    margin: 2rem 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1e1e1e;
+  }
+
+  .label {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    background: #9f9f9f;
+    color: #363636;
+    font-weight: bold;
+    border-bottom: 1px solid #363636;
+  }
+
+  .scroll-wrapper {
+    max-height: 500px;
+    overflow: auto;
+  }
+
+  :global(pre) {
+    margin: 0 !important;
+  }
+</style>

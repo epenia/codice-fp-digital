@@ -21,7 +21,7 @@ const { html, css } = Astro.props;
         <div class="css-section">
           <div class="label">(CSS)</div>
           <div class="scroll-wrapper">
-            <Code code={css} lang="css" theme="github-dark" />
+            <Code code={css} lang="css" theme="github-light" />
           </div>
         </div>
       )
@@ -85,10 +85,5 @@ const { html, css } = Astro.props;
     height: 40%;
     display: flex;
     flex-direction: column;
-  }
-
-  :global(pre) {
-    margin: 0 !important;
-    height: 100%;
   }
 </style>

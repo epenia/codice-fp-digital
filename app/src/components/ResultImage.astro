@@ -1,0 +1,38 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+}
+
+const { src, alt = "Resultado esperado" } = Astro.props;
+---
+
+<div class="result-image">
+  <div class="label">Resultado Esperado</div>
+  <img src={src} alt={alt} />
+</div>
+
+<style>
+  .result-image {
+    margin: 2rem 0;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .label {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+    background: #9f9f9f;
+    color: #363636;
+    font-weight: bold;
+    border-bottom: 1px solid #363636;
+  }
+
+  .result-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
