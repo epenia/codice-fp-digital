@@ -46,6 +46,11 @@ const srcdoc = (!hasInlineStyle && resolvedCss)
 ---
 
 <div class="playground-grid">
+  <div class="preview-column">
+    <div class="label">Vista Previa (Navegador)</div>
+    <iframe srcdoc={srcdoc}></iframe>
+  </div>
+
   <div class="code-column">
     <div class="label">(HTML)</div>
     <div class="scroll-wrapper">
@@ -62,18 +67,18 @@ const srcdoc = (!hasInlineStyle && resolvedCss)
         </div>
       )
     }
-  </div>
-
-  <div class="preview-column">
-    <div class="label">Vista Previa (Navegador)</div>
-    <iframe srcdoc={srcdoc}></iframe>
+    {
+      !css && (
+        <div style="flex-grow: 1"></div>
+      )
+    }
   </div>
 </div>
 
 <style>
   .playground-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2px;
     background: #333;
     border: 1px solid #333;
@@ -83,8 +88,8 @@ const srcdoc = (!hasInlineStyle && resolvedCss)
     height: 600px;
   }
 
-  .code-column,
-  .preview-column {
+  .preview-column,
+  .code-column {
     display: flex;
     flex-direction: column;
     background: #1e1e1e;
@@ -92,7 +97,8 @@ const srcdoc = (!hasInlineStyle && resolvedCss)
   }
 
   .preview-column {
-    background: white;
+    grid-column: 1 / -1;
+    min-height: 0;
   }
 
   .scroll-wrapper {
@@ -115,10 +121,32 @@ const srcdoc = (!hasInlineStyle && resolvedCss)
     border-bottom: 1px solid #363636;
   }
 
-  .css-section {
-    border-top: 2px solid #333;
-    height: 40%;
+  .code-column {
     display: flex;
     flex-direction: column;
+    height: fit-content;
+  }
+
+  .css-section {
+    border-top: 2px solid #333;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .playground-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .preview-column {
+      grid-column: 1 / -1;
+      min-height: 0;
+    }
+
+    .code-column {
+      display: flex;
+      flex-direction: column;
+    }
   }
 </style>
