@@ -3,14 +3,13 @@ title: "Solución Examen HTML 2023 - Star Wars: Andor"
 description: "Solución detallada paso a paso del examen de HTML de febrero de 2023"
 ---
 
-import HtmlCodeSnippet from '../../../../components/HtmlCodeSnippet.astro';
-import codigoBase from "../../../../codigo/html-base.html?raw";
+import HtmlCodeSnippet from "../../../../components/HtmlCodeSnippet.astro";
 import html2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/index.html?raw";
 import css2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/style.css?raw";
 import cartel2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/cartel.jpg?url";
 import icono2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/icono.png?url";
 import font2023 from "../../../../codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/Starwars.ttf?url";
-import ResultImage from '../../../../components/ResultImage.astro';
+import ResultImage from "../../../../components/ResultImage.astro";
 
 # Solución Examen HTML - Febrero 2023
 
@@ -43,6 +42,7 @@ Primero creamos el documento HTML con la estructura semántica adecuada:
 - `<section class="reparto">`: Contiene la lista del reparto con la palabra "Reparto" alineada verticalmente.
 
 ### Elementos clave:
+
 - Uso de `target="_blank"` y `rel="noopener noreferrer"` para abrir el enlace de Wikipedia en una nueva pestaña de forma segura.
 - La imagen utiliza la ruta relativa `cartel.jpg`.
 - La lista del reparto utiliza `list-style-image` para personalizar las viñetas.
@@ -51,9 +51,9 @@ Primero creamos el documento HTML con la estructura semántica adecuada:
   html={html2023}
   css={css2023}
   assets={{
-    'cartel.jpg': cartel2023,
-    'icono.png': icono2023,
-    'Starwars.ttf': font2023,
+    "cartel.jpg": cartel2023,
+    "icono.png": icono2023,
+    "Starwars.ttf": font2023,
   }}
 />
 
@@ -71,8 +71,8 @@ El examen proporciona una fuente `Starwars.ttf`. La cargamos con `@font-face` pa
 
 ```css
 @font-face {
-    font-family: 'StarWars';
-    src: url('Starwars.ttf') format('truetype');
+  font-family: "StarWars";
+  src: url("Starwars.ttf") format("truetype");
 }
 ```
 
@@ -80,12 +80,12 @@ El examen proporciona una fuente `Starwars.ttf`. La cargamos con `@font-face` pa
 
 ```css
 body {
-    background-color: Aqua;
-    color: Navy;
-    font-family: Tahoma, sans-serif;
-    font-size: 150%; /* 50% más grande que el tamaño base */
-    margin: 0;
-    padding: 20px;
+  background-color: Aqua;
+  color: Navy;
+  font-family: Tahoma, sans-serif;
+  font-size: 150%; /* 50% más grande que el tamaño base */
+  margin: 0;
+  padding: 20px;
 }
 ```
 
@@ -98,14 +98,14 @@ body {
 
 ```css
 header {
-    border: 4px solid black;
-    border-radius: 15px;
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  border: 4px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 ```
 
@@ -118,10 +118,10 @@ header {
 ```css
 header h1,
 header h2 {
-    font-family: 'StarWars', sans-serif;
-    color: DarkGreen;
-    text-shadow: 2px 2px 4px yellow;
-    margin: 0;
+  font-family: "StarWars", sans-serif;
+  color: DarkGreen;
+  text-shadow: 2px 2px 4px yellow;
+  margin: 0;
 }
 ```
 
@@ -132,9 +132,9 @@ header h2 {
 
 ```css
 p {
-    text-align: justify;
-    margin-bottom: 1.5em;
-    line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1.5em;
+  line-height: 1.6;
 }
 ```
 
@@ -145,13 +145,13 @@ p {
 
 ```css
 img {
-    float: right;
-    width: 250px;
-    height: auto;
-    margin: 0 0 15px 15px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px DarkGreen;
-    transition: transform 0.3s;
+  float: right;
+  width: 250px;
+  height: auto;
+  margin: 0 0 15px 15px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px DarkGreen;
+  transition: transform 0.3s;
 }
 ```
 
@@ -163,17 +163,17 @@ img {
 
 ```css
 .reparto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    clear: both;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  clear: both;
 }
 
 .reparto ul {
-    list-style-image: url('icono.png');
-    margin: 0;
-    padding-left: 40px;
+  list-style-image: url("icono.png");
+  margin: 0;
+  padding-left: 40px;
 }
 ```
 
@@ -185,9 +185,9 @@ img {
   html={html2023}
   css={css2023}
   assets={{
-    'cartel.jpg': cartel2023,
-    'icono.png': icono2023,
-    'Starwars.ttf': font2023,
+    "cartel.jpg": cartel2023,
+    "icono.png": icono2023,
+    "Starwars.ttf": font2023,
   }}
 />
 
@@ -195,7 +195,10 @@ img {
 
 ## Resultado Esperado
 
-<ResultImage src="/app/src/content/lmsgi/HTML/Examenes/images/examen_2023.png" alt="Resultado esperado del examen 2023" />
+<ResultImage
+  src="/app/src/content/lmsgi/HTML/Examenes/images/examen_2023.png"
+  alt="Resultado esperado del examen 2023"
+/>
 
 ---
 
@@ -207,6 +210,7 @@ La solución completa se encuentra en:
 - `app/src/codigo/ejercicios/html/examenes/examen_2023_febrero/ficheros/style.css`
 
 Recursos necesarios (copiados desde el directorio del examen):
+
 - `cartel.jpg` → Imagen del cartel de Andor
 - `icono.png` → Icono para las viñetas del reparto
 - `Starwars.ttf` → Fuente personalizada para el título
@@ -215,18 +219,18 @@ Recursos necesarios (copiados desde el directorio del examen):
 
 ## Resumen de conceptos aplicados
 
-| Concepto | Implementación |
-|----------|---------------|
-| CSS externo | `<link rel="stylesheet" href="style.css">` |
-| Color de fondo | `background-color: Aqua` |
-| Color de texto | `color: Navy` |
-| Fuente personalizada | `@font-face` con `Starwars.ttf` |
-| Tamaño de fuente | `font-size: 150%` |
-| Texto justificado | `text-align: justify` |
-| Separación párrafos | `margin-bottom: 1.5em` |
-| Bordes redondeados | `border-radius: 15px` |
-| Sombra | `box-shadow` y `text-shadow` |
-| Float | `float: right` para la imagen |
-| Flexbox | `display: flex` para alinear reparto |
-| Enlace externo | `target="_blank"` + `rel="noopener noreferrer"` |
-| Viñetas personalizadas | `list-style-image` |
+| Concepto               | Implementación                                  |
+| ---------------------- | ----------------------------------------------- |
+| CSS externo            | `<link rel="stylesheet" href="style.css">`      |
+| Color de fondo         | `background-color: Aqua`                        |
+| Color de texto         | `color: Navy`                                   |
+| Fuente personalizada   | `@font-face` con `Starwars.ttf`                 |
+| Tamaño de fuente       | `font-size: 150%`                               |
+| Texto justificado      | `text-align: justify`                           |
+| Separación párrafos    | `margin-bottom: 1.5em`                          |
+| Bordes redondeados     | `border-radius: 15px`                           |
+| Sombra                 | `box-shadow` y `text-shadow`                    |
+| Float                  | `float: right` para la imagen                   |
+| Flexbox                | `display: flex` para alinear reparto            |
+| Enlace externo         | `target="_blank"` + `rel="noopener noreferrer"` |
+| Viñetas personalizadas | `list-style-image`                              |
