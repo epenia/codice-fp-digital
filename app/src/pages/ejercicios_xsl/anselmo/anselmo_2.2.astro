@@ -1,0 +1,21 @@
+---
+import XslCodeSnippet from "../../../components/XslCodeSnippet.astro";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioXml from "../../../codigo/ejercicios/xsl/anselmo_2_2/artistas.xml?raw";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/anselmo_2_2/artistas.html?raw";
+import ejercicioXsl from "../../../codigo/ejercicios/xsl/anselmo_2_2/artistas.xsl?raw";
+---
+
+<Base>
+  <nav><a href="../../index.html">← Volver al índice</a></nav>
+  <h1>Ejercicio XSL: Anselmo - Artistas</h1>
+  <p>Mostrar artistas nacidos después de 1500, ordenados por año de nacimiento. Mostrar "Desconocido" si no hay fecha de fallecimiento.</p>
+
+  <HtmlCodeSnippet html={ejercicioHtml} />
+
+  <XslCodeSnippet xsl={ejercicioXsl} label="XSL (transformación)" />
+
+  <XmlCodeSnippet xml={ejercicioXml} />
+</Base>

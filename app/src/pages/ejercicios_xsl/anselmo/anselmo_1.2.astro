@@ -1,0 +1,22 @@
+---
+import CodigoXML from "../../../content/lmsgi/XSL/ejercicios/anselmo_discos.xml?raw";
+import XslCodeSnippet from "../../../components/XslCodeSnippet.astro";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos1/discos1.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos1/discos1.css?raw";
+import ejercicioXsl from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos1/discos1.xsl?raw";
+---
+
+<Base>
+  <nav><a href="../../index.html">← Volver al índice</a></nav>
+  <h1>Ejercicio XSL: Anselmo - Discos 1</h1>
+  <p>Mostrar los discos anteriores a 1975, ordenados por título. Las canciones con menos de 300 segundos, ordenadas por duración.</p>
+
+  <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+  <XslCodeSnippet xsl={ejercicioXsl} label="XSL (transformación)" />
+
+  <XmlCodeSnippet xml={CodigoXML} />
+</Base>

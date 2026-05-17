@@ -1,0 +1,26 @@
+---
+import CodigoXML from "../../../content/lmsgi/XSL/ejercicios/anselmo_discos.xml?raw";
+import XslCodeSnippet from "../../../components/XslCodeSnippet.astro";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import ResultImage from "../../../components/ResultImage.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos2/discos2.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos2/discos2.css?raw";
+import ejercicioXsl from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos2/discos2.xsl?raw";
+import resultadoEsperado from "../../../codigo/ejercicios/xsl/anselmo_1_2_discos2/Discos2.jpg?url";
+---
+
+<Base>
+  <nav><a href="../../index.html">← Volver al índice</a></nav>
+  <h1>Ejercicio XSL: Anselmo - Discos 2</h1>
+  <p>Mostrar todos los discos ordenados por año en orden descendente, con iconos para soporte y nacionalidad.</p>
+
+  <ResultImage src={resultadoEsperado} alt="Resultado esperado - Discos ordenados por año" />
+
+  <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+  <XslCodeSnippet xsl={ejercicioXsl} label="XSL (transformación)" />
+
+  <XmlCodeSnippet xml={CodigoXML} />
+</Base>

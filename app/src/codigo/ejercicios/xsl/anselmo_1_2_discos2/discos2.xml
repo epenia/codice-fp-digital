@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Discoteca>
+    <disco id="D001" género="Rock">
+        <soporte>CD</soporte>
+        <titulo>Have a nice day</titulo>
+        <artista nacionalidad="Estados Unidos">Jon Bon Jovi</artista>
+        <cancion tiempo="216">Have A Nice Day</cancion>
+        <cancion tiempo="229">I Wanna Be Loved</cancion>
+        <cancion tiempo="227">Welcome To Wherever You Are</cancion>
+        <cancion tiempo="230">Who Says You Can't Go Home?</cancion>
+        <cancion tiempo="271">Last Man Standing</cancion>
+        <cancion tiempo="296">Bells Of Freedom</cancion>
+        <cancion tiempo="254">Wildflowers</cancion>
+        <cancion tiempo="218">Last Cigarette</cancion>
+        <cancion tiempo="234">I Am</cancion>
+        <cancion tiempo="217">Complicated</cancion>
+        <cancion tiempo="289">Novocaine</cancion>
+        <cancion tiempo="249">Story Of My Life</cancion>
+        <cancion tiempo="234">Dirty Little Secret</cancion>
+        <sello>Island Records</sello>
+        <año>2005</año>
+    </disco>
+    <disco id="V002" género="Soul">
+        <soporte>Vinilo</soporte>
+        <titulo>Can't get enough</titulo>
+        <artista nacionalidad="Estados Unidos">Barry White</artista>
+        <cancion tiempo="112">Mellow Mood (Pt. 1)</cancion>
+        <cancion tiempo="276">You're the First, the Last, My Everything</cancion>
+        <cancion tiempo="621">I Can't Believe You Love Me</cancion>
+        <cancion tiempo="274">Can't Get Enough of Your Love, Babe</cancion>
+        <cancion tiempo="234">Oh Love, Well We Finally Made It</cancion>
+        <cancion tiempo="299">I Love You More Than Anything (In This World Girl)</cancion>
+        <cancion tiempo="83">Mellow Mood (Pt. 2)</cancion>
+        <sello>20th Century</sello>
+        <año>1974</año>
+    </disco>
+    <disco id="C003" género="Rock">
+        <soporte>Cinta</soporte>
+        <titulo>Abbey Road</titulo>
+        <artista nacionalidad="Reino Unido">The Beatles</artista>
+        <cancion tiempo="260">Come Together</cancion>
+        <cancion tiempo="183">Something</cancion>
+        <cancion tiempo="207">Maxwell's Silver Hammer</cancion>
+        <cancion tiempo="206">Oh! Darling</cancion>
+        <cancion tiempo="171">Octopus's Garden</cancion>
+        <cancion tiempo="467">I Want You (She's So Heavy)</cancion>
+        <sello>Apple Records</sello>
+        <año>1969</año>
+    </disco>
+    <disco id="V004" género="Pop">
+        <soporte>Vinilo</soporte>
+        <titulo>Thriller</titulo>
+        <artista nacionalidad="Estados Unidos">Michael Jackson</artista>
+        <cancion tiempo="362">Wanna Be Startin' Somethin'</cancion>
+        <cancion tiempo="260">Baby Be Mine</cancion>
+        <cancion tiempo="222">The Girl Is Mine</cancion>
+        <cancion tiempo="357">Thriller</cancion>
+        <cancion tiempo="259">Beat It</cancion>
+        <cancion tiempo="294">Billie Jean</cancion>
+        <cancion tiempo="245">Human Nature</cancion>
+        <cancion tiempo="238">P.Y.T (Pretty Young Thing)</cancion>
+        <cancion tiempo="299">The Lady In My Life</cancion>
+        <sello>Epic Records</sello>
+        <año>1982</año>
+    </disco>
+    <disco id="D005" género="Pop">
+        <soporte>CD</soporte>
+        <titulo>Pies descalzos</titulo>
+        <artista nacionalidad="Colombia">Shakira</artista>
+        <cancion tiempo="231">Estoy aqui</cancion>
+        <cancion tiempo="254">Antologia</cancion>
+        <cancion tiempo="244">Un poco de amor</cancion>
+        <cancion tiempo="252">Quiero</cancion>
+        <cancion tiempo="240">Te necesito</cancion>
+        <cancion tiempo="234">Vuelve</cancion>
+        <cancion tiempo="204">Te espero sentada</cancion>
+        <cancion tiempo="206">Pies descalzos, suenos blancos</cancion>
+        <cancion tiempo="150">Pienso en ti</cancion>
+        <cancion tiempo="232">Donde estas corazon?</cancion>
+        <cancion tiempo="218">Se quiere, se mata</cancion>
+        <sello>Sony BMG</sello>
+        <año>1995</año>
+    </disco>
+    <disco id="D006" género="Pop">
+        <soporte>CD</soporte>
+        <titulo>La Vida Es</titulo>
+        <artista nacionalidad="Italia">Nek</artista>
+        <cancion tiempo="213">Llegas Tu</cancion>
+        <cancion tiempo="246">Miami</cancion>
+        <cancion tiempo="209">La Vida Es</cancion>
+        <cancion tiempo="237">Nuestro Mejor Dia</cancion>
+        <cancion tiempo="210">Lleno De Energia</cancion>
+        <cancion tiempo="256">En El Tren</cancion>
+        <cancion tiempo="226">Celos</cancion>
+        <cancion tiempo="257">Vivire</cancion>
+        <cancion tiempo="215">Volver A Vivir</cancion>
+        <cancion tiempo="254">Creo</cancion>
+        <cancion tiempo="223">Comenzar De Cero</cancion>
+        <cancion tiempo="214">Tu Me Das</cancion>
+        <cancion tiempo="233">Lejos De Mi</cancion>
+        <cancion tiempo="225">Llegas Tu</cancion>
+        <sello>Island Records</sello>
+        <año>2000</año>
+    </disco>
+    <disco id="C007" género="Pop">
+        <soporte>Cinta</soporte>
+        <titulo>La Carretera</titulo>
+        <artista nacionalidad="España">Julio Iglesias</artista>
+        <cancion tiempo="281">La Carretera</cancion>
+        <cancion tiempo="233">Cosas de la Vida</cancion>
+        <cancion tiempo="230">Baila Morena</cancion>
+        <cancion tiempo="216">Derroche</cancion>
+        <cancion tiempo="206">El ultimo verano</cancion>
+        <cancion tiempo="268">Agua Dulce, Agua Sala</cancion>
+        <cancion tiempo="254">Sin Excusas Ni Rodeos</cancion>
+        <cancion tiempo="164">Mal de Amores</cancion>
+        <cancion tiempo="247">Rumbas</cancion>
+        <cancion tiempo="191">Vuela Alto</cancion>
+        <sello>Sony BMG</sello>
+        <año>1995</año>
+    </disco>
+    <disco id="V008" género="Pop">
+        <soporte>Vinilo</soporte>
+        <titulo>Yo soy aquel</titulo>
+        <artista nacionalidad="España">Raphael</artista>
+        <cancion tiempo="162">Yo soy aquel</cancion>
+        <cancion tiempo="130">Es verdad</cancion>
+        <cancion tiempo="201">La noche</cancion>
+        <cancion tiempo="185">Hasta Venecia</cancion>
+        <sello>Hispavox</sello>
+        <año>1966</año>
+    </disco>
+</Discoteca>

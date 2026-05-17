@@ -70,18 +70,18 @@ Ver en navegador pulsando el icono desde el programa
 
 ### Elementos principales de XSLT
 
-| **Elemento**               | **Descripción**                                                              | **Ejemplo**                                                         |
-| -------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **`<xsl:template>`**       | Define una plantilla con patrones de coincidencia                            | `<xsl:template match="/">`                                         |
-| **`<xsl:apply-templates>`** | Aplica plantillas a los nodos hijos                                          | `<xsl:apply-templates select="alumno"/>`                            |
-| **`<xsl:value-of>`**       | Extrae el valor de un nodo seleccionado                                      | `<xsl:value-of select="nombre"/>`                                   |
-| **`<xsl:for-each>`**       | Bucle sobre un conjunto de nodos                                             | `<xsl:for-each select="alumno">`                                    |
-| **`<xsl:if>`**             | Condicional simple                                                           | `<xsl:if test="edad > 18">`                                        |
-| **`<xsl:choose>`**         | Condicional múltiple (como switch/case)                                      | `<xsl:choose>` con `<xsl:when>` y `<xsl:otherwise>`                |
-| **`<xsl:sort>`**           | Ordena los nodos seleccionados                                               | `<xsl:sort select="nombre" order="ascending"/>`  `(descending)`                    |
-| **`<xsl:variable>`**       | Define una variable                                                          | `<xsl:variable name="total" select="sum(precio)"/>`                 |
-| **`<xsl:text>`**           | Inserta texto literal                                                        | `<xsl:text>Ejemplo: </xsl:text>`                                      |
-| **`<xsl:copy-of>`**        | Copia nodos o fragmentos                                                     | `<xsl:copy-of select="direccion"/>`                                 |
+| **Elemento**                | **Descripción**                                   | **Ejemplo**                                                            |
+| --------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------- |
+| **`<xsl:template>`**        | Define una plantilla con patrones de coincidencia | `<xsl:template match="/">AQUI_PLANTILLA</xsl:template>`                |
+| **`<xsl:apply-templates>`** | Aplica plantillas a los nodos hijos               | `<xsl:apply-templates select="alumno"/>` este ya va cerrado            |
+| **`<xsl:value-of>`**        | Extrae el valor de un nodo seleccionado           | `<xsl:value-of select="nombre"/>`                                      |
+| **`<xsl:for-each>`**        | Bucle sobre un conjunto de nodos                  | `<xsl:for-each select="alumno">La cosa que se repite para cada alumno` |
+| **`<xsl:if>`**              | Condicional simple                                | `<xsl:if test="edad > 18">`                                            |
+| **`<xsl:choose>`**          | Condicional múltiple (como switch/case)           | `<xsl:choose>` con `<xsl:when>` y `<xsl:otherwise>`                    |
+| **`<xsl:sort>`**            | Ordena los nodos seleccionados                    | `<xsl:sort select="nombre" order="ascending"/>`  `(descending)`        |
+| **`<xsl:variable>`**        | Define una variable                               | `<xsl:variable name="total" select="sum(precio)"/>`                    |
+| **`<xsl:text>`**            | Inserta texto literal                             | `<xsl:text>Ejemplo: </xsl:text>`                                       |
+| **`<xsl:copy-of>`**         | Copia nodos o fragmentos                          | `<xsl:copy-of select="direccion"/>`                                    |
 
 ---
 
@@ -104,14 +104,14 @@ XPath es el lenguaje que permite navegar y seleccionar nodos dentro de un docume
 
 ### Predicados XPath (filtros)
 
-| **Predicado**       | **Descripción**                                   | **Ejemplo**                          |
-| ------------------- | ------------------------------------------------ | ------------------------------------ |
-| `[n]`               | Selecciona el nodo en posición n. Inicio 1                  | `alumno[2]`                          |
-| `[primero]`         | Selecciona el primero que cumple condición         | `alumno[nombre='Ana']`               |
-| `[last()]`          | Selecciona el último nodo                         | `alumno[last()]`                     |
-| `[position() < n]`  | Selecciona nodos por posición                      | `alumno[position() < 5]`             |
-| `[@atributo]`       | Selecciona nodos que tienen atributo               | `alumno[@dni]`                       |
-| `[@atributo='valor']` | Selecciona nodos con atributo igual a valor     | `alumno[@estado='activo']`           |
+| **Predicado**         | **Descripción**                             | **Ejemplo**                |
+| --------------------- | ------------------------------------------- | -------------------------- |
+| `[n]`                 | Selecciona el nodo en posición n. Inicio 1  | `alumno[2]`                |
+| `[primero]`           | Selecciona el primero que cumple condición  | `alumno[nombre='Ana']`     |
+| `[last()]`            | Selecciona el último nodo                   | `alumno[last()]`           |
+| `[position() < n]`    | Selecciona nodos por posición               | `alumno[position() < 5]`   |
+| `[@atributo]`         | Selecciona nodos que tienen atributo        | `alumno[@dni]`             |
+| `[@atributo='valor']` | Selecciona nodos con atributo igual a valor | `alumno[@estado='activo']` |
 
 ### Operadores XPath
 
@@ -130,20 +130,24 @@ XPath es el lenguaje que permite navegar y seleccionar nodos dentro de un docume
 
 ### Funciones XPath
 
-| **Función**           | **Descripción**                               | **Ejemplo**                          |
-| --------------------- | --------------------------------------------- | ------------------------------------ |
-| `count(nodos)`        | Cuenta el número de nodos                     | `count(alumno)`                      |
-| `sum(nodos)`          | Suma los valores numéricos                     | `sum(notas)`                         |
-| `avg(nodos)`          | Calcula la media                              | `avg(notas)`                         |
-| `min(nodos)`          | Valor mínimo                                  | `min(notas)`                         |
-| `max(nodos)`          | Valor máximo                                  | `max(notas)`                         |
-| `string-length(texto)` | Longitud de una cadena                        | `string-length(nombre)`              |
-| `contains(texto,busca)` | Comprueba si contiene substring             | `contains(nombre, 'Pepe')`           |
-| `starts-with(texto,busca)` | Comprueba si empieza con                | `starts-with(nombre, 'A')`           |
-| `concat(texto1,texto2)` | Concatena cadenas                          | `concat(nombre, ' ', apellido)`      |
-| `position()`          | Posición del nodo actual                       | `alumno[position() = 1]`             |
-| `last()`              | Posición del último nodo                       | `alumno[last()]`                     |
-| `normalize-space()`   | Elimina espacios                        | `normalize-space(nombre)`            |
+
+
+| **Función**                | **Descripción**                        | **Ejemplo**                                                                     |
+| -------------------------- | -------------------------------------- | ------------------------------------------------------------------------------- |
+| `count(nodos)`             | Cuenta el número de nodos              | `count(alumno)`                                                                 |
+| `sum(nodos)`               | Suma los valores numéricos             | `sum(notas)`                                                                    |
+| `avg(nodos)`               | Calcula la media                       | `avg(notas)`                                                                    |
+| `min(nodos)`               | Valor mínimo                           | `min(notas)`                                                                    |
+| `max(nodos)`               | Valor máximo                           | `max(notas)`                                                                    |
+| `string-length(texto)`     | Longitud de una cadena                 | `string-length(nombre)`                                                         |
+| `contains(texto,busca)`    | Comprueba si contiene una coincidencia | `contains(nombre, 'Pepe')`                                                      |
+| `starts-with(texto,busca)` | Comprueba si empieza con               | `starts-with(nombre, 'A')`                                                      |
+| `concat(texto1,texto2)`    | Concatena cadenas                      | `concat(nombre, ' ', apellido)`                                                 |
+| `position()`               | Posición del nodo actual               | `alumno[position() = 1]`                                                        |
+| `last()`                   | Posición del último nodo               | `alumno[last()]`                                                                |
+| `normalize-space()`        | Elimina espacios                       | `normalize-space(nombre)`                                                       |
+| `translate()`              | traduce un valor en otro               | `translate(elemento-a-usar,'busca elemento usado', 'equivalente a reemplazar')` |
+
 
 ---
 

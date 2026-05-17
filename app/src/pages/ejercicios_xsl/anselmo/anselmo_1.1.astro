@@ -1,0 +1,17 @@
+---
+import CodigoXML from "../../../content/lmsgi/XSL/ejercicios/anselmo_1_1.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/anselmo_1_1/index.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/anselmo_1_1/index.css?raw";
+---
+
+<Base>
+  <nav><a href="../../index.html">← Volver al índice</a></nav>
+  <h1>Ejercicio XSL: Anselmo catalogo CD's</h1>
+
+  <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+  <XmlCodeSnippet xml={CodigoXML} />
+</Base>

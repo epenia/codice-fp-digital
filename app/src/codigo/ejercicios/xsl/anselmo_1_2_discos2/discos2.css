@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial;
+}
+
+th,
+td {
+    border: 4px solid black;
+    padding: 8px;
+    vertical-align: center;
+    text-align: center;
+}
+
+img.soporte {
+    max-width: 50px;
+    height: auto;
+}
+
+img.nacionalidad {
+    max-width: 100px;
+    height: auto;
+}
+
+th {
+    background-color: blue;
+    color: aqua;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+}
