@@ -1,176 +1,134 @@
 ---
-import { Content as ContenidoEspecial } from "../content/lmsgi/introduccion.mdx";
 import Base from "../layout/base.astro";
 ---
 
 <Base>
-  <nav>
-    <h2>Índice de contenidos</h2>
-    <ul>
-      <li>
-        <a href="html.html">HTML</a> — HyperText Markup Language. Lenguaje de marcado
-        para crear páginas web con estructura, contenido y enlaces hipertexto.
-      </li>
-      <li>
-        <a href="dtd.html">DTD</a> — Document Type Definition. Especifica las reglas
-        de estructura y los elementos permitidos en un documento XML.
-      </li>
-      <li>
-        <a href="xsd.html">XSD</a> — XML Schema Definition. Lenguaje más potente que
-        DTD para definir esquemas XML con tipos de datos, restricciones y validación
-        avanzada.
-      </li>
-      <li>
-        <a href="xsl.html">XSL</a> — Extensible Stylesheet Language. Transforma documentos
-        XML en otros formatos, como HTML o PDF, mediante plantillas y reglas de transformación.
-      </li>
-      <li>
-        <a href="xquery.html">XQuery</a> — Lenguaje de consulta para XML. Permite
-        buscar, filtrar y extraer datos específicos de documentos XML de forma eficiente.
-      </li>
-    </ul>
-  </nav>
+   <section class="temas">
+      <article class="tema html">
+         <h2>HTML</h2>
+         <p>HyperText Markup Language. Lenguaje de marcado para crear páginas web con estructura, contenido y enlaces hipertexto.</p>
+         <a href="html">Ver contenido</a>
 
-  <nav>
-    <h2>Ejercicios XSD</h2>
+         <h3>Exámenes</h3>
+         <ul>
+            <li>
+               <a href="ejercicios_html/examen_2023">Examen 2023 — Star Wars: Andor</a>
+               <span>Página con estilos CSS externos, float, sombras, viñetas personalizadas y enlace a Wikipedia.</span>
+            </li>
+            <li>
+               <a href="ejercicios_html/examen_2025">Examen 2025 — Star Wars: Tripulación Perdida</a>
+               <span>Tres ejercicios: página principal, reparto en 3 columnas y formulario con envío por correo.</span>
+            </li>
+            <li>
+               <a href="ejercicios_html/examen_2026">Examen 2026 — Star Wars: Young Jedi Adventures</a>
+               <span>RA2: maquetación semántica con Flexbox y fondo atenuado. RA3: JavaScript para cálculo de perímetro.</span>
+            </li>
+         </ul>
+      </article>
 
-    <h3>Minimax</h3>
-    <ul>
-      <li><a href="ejercicios_xsd/biblioteca.html">Biblioteca</a></li>
-      <li><a href="ejercicios_xsd/hotel.html">Hotel</a></li>
-      <li><a href="ejercicios_xsd/musica.html">Música</a></li>
-      <li><a href="ejercicios_xsd/coches.html">Coches</a></li>
-    </ul>
+      <article class="tema dtd">
+         <h2>DTD</h2>
+         <p>Document Type Definition. Especifica las reglas de estructura y los elementos permitidos en un documento XML.</p>
+         <a href="dtd">Ver contenido</a>
+      </article>
 
-    <h3>Gemma</h3>
-    <ul>
-      <li><a href="ejercicios_xsd/gemma/biblioteca.html">Biblioteca</a></li>
-      <li><a href="ejercicios_xsd/gemma/hotel.html">Hotel</a></li>
-      <li><a href="ejercicios_xsd/gemma/musica.html">Música</a></li>
-      <li><a href="ejercicios_xsd/gemma/coches.html">Coches</a></li>
-    </ul>
+      <article class="tema xsd">
+         <h2>XSD</h2>
+         <p>XML Schema Definition. Lenguaje más potente que DTD para definir esquemas XML con tipos de datos, restricciones y validación avanzada.</p>
+         <a href="xsd">Ver contenido</a>
 
-    <h3>Gemini</h3>
-    <ul>
-      <li>
-        <a href="ejercicios_xsd/gemini/biblioteca_a.html">Biblioteca A</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsd/gemini/biblioteca_b.html">Biblioteca B</a>
-      </li>
-      <li><a href="ejercicios_xsd/gemini/hotel_a.html">Hotel A</a></li>
-      <li><a href="ejercicios_xsd/gemini/hotel_b.html">Hotel B</a></li>
-      <li><a href="ejercicios_xsd/gemini/musica_a.html">Música A</a></li>
-      <li><a href="ejercicios_xsd/gemini/musica_b.html">Música B</a></li>
-      <li><a href="ejercicios_xsd/gemini/coches_a.html">Coches A</a></li>
-      <li><a href="ejercicios_xsd/gemini/coches_b.html">Coches B</a></li>
-    </ul>
-  </nav>
+         <h3>Ejercicios</h3>
 
-  <nav>
-    <h2>Ejercicios XSL</h2>
+         <h4>Minimax</h4>
+         <ul>
+            <li><a href="ejercicios_xsd/biblioteca">Biblioteca</a></li>
+            <li><a href="ejercicios_xsd/hotel">Hotel</a></li>
+            <li><a href="ejercicios_xsd/musica">Música</a></li>
+            <li><a href="ejercicios_xsd/coches">Coches</a></li>
+         </ul>
 
-    <h3>Gemini</h3>
-    <ul>
-      <li>
-        <a href="ejercicios_xsl/gemini/coches_1.1.html"
-          >Catálogo de Automoción - Informe de Potencia</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/coches_1.2.html"
-          >Catálogo de Automoción - Auditoría de Eficiencia</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/musica_2.1.html"
-          >Archivo Histórico del Rock - Éxitos y Producción</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/musica_2.2.html"
-          >Archivo Histórico del Rock - Análisis de Bandas</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/biblioteca_3.1.html"
-          >Biblioteca y Literatura - Catálogo en Español</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/biblioteca_3.2.html"
-          >Biblioteca y Literatura - Metadatos y Cronología</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/hotel_4.1.html"
-          >Sistema de Reservas - Reporte de Facturación</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/gemini/hotel_4.2.html"
-          >Sistema de Reservas - Gestión de Habitaciones</a>
-      </li>
-    </ul>
+         <h4>Gemma</h4>
+         <ul>
+            <li><a href="ejercicios_xsd/gemma/biblioteca">Biblioteca</a></li>
+            <li><a href="ejercicios_xsd/gemma/hotel">Hotel</a></li>
+            <li><a href="ejercicios_xsd/gemma/musica">Música</a></li>
+            <li><a href="ejercicios_xsd/gemma/coches">Coches</a></li>
+         </ul>
 
-    <h3>Anselmo resultados</h3>
-    <ul>
-      <li>
-        <a href="ejercicios_xsl/anselmo/anselmo_1.1.html">Discografíca</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/anselmo/anselmo_1.2.html">Discos 1 - Discos anteriores a 1975</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/anselmo/anselmo_1.2b.html">Discos 2 - Ordenados por año</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/anselmo/anselmo_2.1.html">Bailes - Bailes con 10+ plazas</a>
-      </li>
-      <li>
-        <a href="ejercicios_xsl/anselmo/anselmo_2.2.html">Artistas - Artistas posteriores a 1500</a>
-      </li>
-    </ul>
-  </nav>
+         <h4>Gemini</h4>
+         <ul>
+            <li><a href="ejercicios_xsd/gemini/biblioteca_a">Biblioteca A</a></li>
+            <li><a href="ejercicios_xsd/gemini/biblioteca_b">Biblioteca B</a></li>
+            <li><a href="ejercicios_xsd/gemini/hotel_a">Hotel A</a></li>
+            <li><a href="ejercicios_xsd/gemini/hotel_b">Hotel B</a></li>
+            <li><a href="ejercicios_xsd/gemini/musica_a">Música A</a></li>
+            <li><a href="ejercicios_xsd/gemini/musica_b">Música B</a></li>
+            <li><a href="ejercicios_xsd/gemini/coches_a">Coches A</a></li>
+            <li><a href="ejercicios_xsd/gemini/coches_b">Coches B</a></li>
+         </ul>
+      </article>
 
-  <nav>
-    <h2>Ejercicios HTML - Exámenes</h2>
-    <ul>
-      <li>
-        <a href="ejercicios_html/examen_2023.html">Examen 2023 — Star Wars: Andor</a>
-        <span>— Página con estilos CSS externos, float, sombras, viñetas personalizadas y enlace a Wikipedia.</span>
-      </li>
-      <li>
-        <a href="ejercicios_html/examen_2025.html">Examen 2025 — Star Wars: Tripulación Perdida</a>
-        <span>— Tres ejercicios: página principal, reparto en 3 columnas y formulario con envío por correo.</span>
-      </li>
-      <li>
-        <a href="ejercicios_html/examen_2026.html">Examen 2026 — Star Wars: Young Jedi Adventures</a>
-        <span>— RA2: maquetación semántica con Flexbox y fondo atenuado. RA3: JavaScript para cálculo de perímetro.</span>
-      </li>
-    </ul>
-  </nav>
+      <article class="tema xsl">
+         <h2>XSL</h2>
+         <p>Extensible Stylesheet Language. Transforma documentos XML en otros formatos, como HTML o PDF, mediante plantillas y reglas de transformación.</p>
+         <a href="xsl">Ver contenido</a>
 
-  <nav>
-    <h2>Ejercicios XQuery - Enunciados</h2>
-    <ul>
-      <li>
-        <a href="ejercicios_xquery/enunciados/musica_rock.html">Música Rock</a>
-        <span>— Bandas, álbumes, canciones y giras del período 1960-1980.</span>
-      </li>
-      <li>
-        <a href="ejercicios_xquery/enunciados/hotel_reservas.html">Hotel Reservas</a>
-        <span>— Sistema de gestión hotelera con servicios, habitaciones y facturación.</span>
-      </li>
-      <li>
-        <a href="ejercicios_xquery/enunciados/coches_marcas.html">Coches Marcas</a>
-        <span>— Catálogo de automoción con marcas, modelos y especificaciones técnicas.</span>
-      </li>
-      <li>
-        <a href="ejercicios_xquery/enunciados/biblioteca_libros.html">Biblioteca Libros</a>
-        <span>— Catálogo bibliográfico con libros, autores, géneros y contenido.</span>
-      </li>
-      <li>
-        <a href="ejercicios_xquery/enunciados/anselmo_discos.html">Anselmo Discos</a>
-        <span>— Discoteca con información sobre discos, artistas y canciones.</span>
-      </li>
-      <li>
-        <a href="ejercicios_xquery/enunciados/anselmo_1_1.html">Anselmo Catálogo CDs</a>
-        <span>— Catálogo de CDs con títulos, artistas, precios y discográficas.</span>
-      </li>
-    </ul>
-  </nav>
+         <h3>Ejercicios</h3>
+
+         <h4>Gemini</h4>
+         <ul>
+            <li><a href="ejercicios_xsl/gemini/coches_1.1">Catálogo de Automoción - Informe de Potencia</a></li>
+            <li><a href="ejercicios_xsl/gemini/coches_1.2">Catálogo de Automoción - Auditoría de Eficiencia</a></li>
+            <li><a href="ejercicios_xsl/gemini/musica_2.1">Archivo Histórico del Rock - Éxitos y Producción</a></li>
+            <li><a href="ejercicios_xsl/gemini/musica_2.2">Archivo Histórico del Rock - Análisis de Bandas</a></li>
+            <li><a href="ejercicios_xsl/gemini/biblioteca_3.1">Biblioteca y Literatura - Catálogo en Español</a></li>
+            <li><a href="ejercicios_xsl/gemini/biblioteca_3.2">Biblioteca y Literatura - Metadatos y Cronología</a></li>
+            <li><a href="ejercicios_xsl/gemini/hotel_4.1">Sistema de Reservas - Reporte de Facturación</a></li>
+            <li><a href="ejercicios_xsl/gemini/hotel_4.2">Sistema de Reservas - Gestión de Habitaciones</a></li>
+         </ul>
+
+         <h4>Anselmo</h4>
+         <ul>
+            <li><a href="ejercicios_xsl/anselmo/anselmo_1.1">Discográfica</a></li>
+            <li><a href="ejercicios_xsl/anselmo/anselmo_1.2">Discos 1 - Discos anteriores a 1975</a></li>
+            <li><a href="ejercicios_xsl/anselmo/anselmo_1.2b">Discos 2 - Ordenados por año</a></li>
+            <li><a href="ejercicios_xsl/anselmo/anselmo_2.1">Bailes - Bailes con 10+ plazas</a></li>
+            <li><a href="ejercicios_xsl/anselmo/anselmo_2.2">Artistas - Artistas posteriores a 1500</a></li>
+         </ul>
+      </article>
+
+      <article class="tema xquery">
+         <h2>XQuery</h2>
+         <p>Lenguaje de consulta para XML. Permite buscar, filtrar y extraer datos específicos de documentos XML de forma eficiente.</p>
+         <a href="xquery">Ver contenido</a>
+
+         <h3>Enunciados</h3>
+         <ul>
+            <li>
+               <a href="ejercicios_xquery/enunciados/musica_rock">Música Rock</a>
+               <span>Bandas, álbumes, canciones y giras del período 1960-1980.</span>
+            </li>
+            <li>
+               <a href="ejercicios_xquery/enunciados/hotel_reservas">Hotel Reservas</a>
+               <span>Sistema de gestión hotelera con servicios, habitaciones y facturación.</span>
+            </li>
+            <li>
+               <a href="ejercicios_xquery/enunciados/coches_marcas">Coches Marcas</a>
+               <span>Catálogo de automoción con marcas, modelos y especificaciones técnicas.</span>
+            </li>
+            <li>
+               <a href="ejercicios_xquery/enunciados/biblioteca_libros">Biblioteca Libros</a>
+               <span>Catálogo bibliográfico con libros, autores, géneros y contenido.</span>
+            </li>
+            <li>
+               <a href="ejercicios_xquery/enunciados/anselmo_discos">Anselmo Discos</a>
+               <span>Discoteca con información sobre discos, artistas y canciones.</span>
+            </li>
+            <li>
+               <a href="ejercicios_xquery/enunciados/anselmo_1_1">Anselmo Catálogo CDs</a>
+               <span>Catálogo de CDs con títulos, artistas, precios y discográficas.</span>
+            </li>
+         </ul>
+      </article>
+   </section>
 </Base>

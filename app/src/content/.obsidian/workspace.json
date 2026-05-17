@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "9318c700d095e519",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b671ab22caacabc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1dbee14951907e0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lmsgi/XQuery/XQuery_Resumen.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "XQuery_Resumen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cb68a9d134877e47",
+    "type": "split",
+    "children": [
+      {
+        "id": "4fef327f0d74ff27",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "782e65d049f50a53",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "f757a335f073f2c8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "dd27ce1095c00081",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "fcdcb317957ce9b0",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9625279ad618238",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "354e6419965e4222",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "lmsgi/XSD/XSD_Resumen.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de XSD_Resumen"
+            }
+          },
+          {
+            "id": "66b1bd4b707fb7bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "lmsgi/XSD/XSD_Resumen.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de XSD_Resumen"
+            }
+          },
+          {
+            "id": "1cabc4806dd438e5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "ac215edbc8b4f23a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "d28f84ae1b71d4da",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "lmsgi/XSD/XSD_Resumen.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de XSD_Resumen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "1dbee14951907e0e",
+  "lastOpenFiles": [
+    "lmsgi/XQuery/ejercicios/musica_rock.xml",
+    "lmsgi/XQuery/ejercicios/hotel_reservas.xml",
+    "lmsgi/XQuery/ejercicios/coches_marcas.xml",
+    "lmsgi/XQuery/ejercicios/biblioteca_libros.xml",
+    "lmsgi/XQuery/ejercicios/anselmo_discos.xml",
+    "lmsgi/XQuery/ejercicios/anselmo_1_1.xml",
+    "lmsgi/XQuery/ejercicios/enunciados/anselmo_1_1.md",
+    "lmsgi/XSL/XSL_Resumen.md",
+    "lmsgi/XQuery/ejercicios/enunciados/anselmo_discos.md",
+    "lmsgi/XQuery/ejercicios/enunciados/biblioteca_libros.md",
+    "lmsgi/XQuery/ejercicios/enunciados/coches_marcas.md",
+    "lmsgi/XQuery/ejercicios/enunciados/hotel_reservas.md",
+    "lmsgi/XQuery/ejercicios/enunciados/musica_rock.md",
+    "lmsgi/XQuery/ejercicios/enunciados",
+    "lmsgi/XQuery/ejercicios",
+    "lmsgi/XSL/ejercicios/ejercicio_anselmo_discos.md",
+    "lmsgi/XSL/ejercicios/biblioteca_libros.xq",
+    "lmsgi/XSL/ejercicios/hotel_reservas.xq",
+    "lmsgi/XQuery/XQuery_Resumen.md",
+    "lmsgi/XQuery/images/xquery_3.png",
+    "lmsgi/XQuery/images/xquery_2.png",
+    "lmsgi/XQuery/images/xquery_1.png",
+    "lmsgi/HTML/Examenes/HTML Examen 2026 febrero.md",
+    "lmsgi/HTML/HTML_Resumen.md",
+    "lmsgi/HTML/XSD_Resumen.md",
+    "lmsgi/HTML/Soluciones/HTML Solucion Examen 2023 febrero.md",
+    "lmsgi/HTML/Soluciones/HTML Solucion Examen 2026 febrero.md",
+    "lmsgi/HTML/Soluciones/HTML Solucion Examen 2025 febrero.md",
+    "lmsgi/HTML/Examenes/resources_2026/Logo1.png",
+    "lmsgi/HTML/Examenes/resources_2026/Logo.png",
+    "lmsgi/HTML/Examenes/resources_2026/cartel.jpg",
+    "lmsgi/HTML/Examenes/resources_2025/Logo.png",
+    "lmsgi/HTML/Examenes/resources_2025/cartel2.jpg",
+    "lmsgi/HTML/Examenes/resources_2025/cartel.jpg",
+    "lmsgi/HTML/Examenes/resources_2023/icono.png",
+    "lmsgi/HTML/Examenes/HTML Examen 2025 febrero.md",
+    "lmsgi/HTML/Examenes/HTML Examen 2023 febrero.md",
+    "lmsgi/XSL/ejercicios/gemini/Ejercicio_1.1_Informe_Potencia.md",
+    "lmsgi/XSD/XSD_Resumen.md",
+    "lmsgi/XSD/ejercicios/minimax_resueltas/musica_solucion.md",
+    "lmsgi/XSD/ejercicios/minimax_resueltas/hotel_solucion.md",
+    "lmsgi/XSD/ejercicios/minimax_resueltas/coches_solucion.md",
+    "lmsgi/XSD/ejercicios/minimax_resueltas/biblioteca_solucion.md",
+    "lmsgi/XSL/ejercicios/gemini/Ejercicios.md",
+    "lmsgi/XSL/ejercicios/gemini/Ejercicio_4.2_Gestion_Habitaciones.md"
+  ]
+}
