@@ -1,0 +1,12 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XQuery/ejercicios/enunciados/anselmo_1_1.md";
+import anselmo11Xml from "../../../content/lmsgi/XQuery/ejercicios/anselmo_1_1.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+---
+
+<Base>
+    <nav><a href="../../index.html">← Volver al índice</a></nav>
+    <ContenidoEjercicio />
+    <XmlCodeSnippet xml={anselmo11Xml} />
+</Base>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo_automocion>
+    <marca id="M001" pais="Alemania" dias_existen="140" estilo="Lujo Deportivo">
+        <nombre>Mercedes-Benz</nombre>
+        <logotipos>
+            <formato tipo="Estrella de tres puntas" color_primario="#0096FF" historia="Simbolo de calidad y lujo."/>
+        </logotipos>
+        <modelos>
+            <modelo id="C101" nombre="C-Class" anio_inicio="2000" anio_actual="2024" tipo="Sedán" motor_primario="Gasolina">
+                <atributos>
+                    <potencia_cv unidad="CaballosVapor">204</potencia_cv>
+                    <transmision tipos_compatibles="Automática, Manual">7 velocidades</transmision>
+                    <consumo_combustible ciudad="6.0" autopista="5.5"/>
+                </atributos>
+                <equipamiento>
+                    <sistema_infotainment marca_soporte="MBUX" conectividad="Navegador, Spotify" />
+                    <tecnologia_seguridad incluye="Asistencia de Carril, Frenado de Emergencia" />
+                </equipamiento>
+            </modelo>
+            <modelo id="C102" nombre="GLE SUV" anio_inicio="2015" anio_actual="2024" tipo="SUV Lujo" motor_primario="Diesel">
+                <atributos>
+                    <potencia_cv unidad="CaballosVapor">250</potencia_cv>
+                    <transmision tipos_compatibles="Automática">9 velocidades</transmision>
+                    <consumo_combustible ciudad="8.5" autopista="7.8"/>
+                </atributos>
+                <equipamiento>
+                    <sistema_infotainment marca_soporte="MBUX" conectividad="Satélite, Streaming" />
+                    <tecnologia_seguridad incluye="Rastreo Remoto, Asistencia al Conductor Nivel 2" />
+                </equipamiento>
+                <color_preferido swatch="#333333" temporada="Invierno"/>
+            </modelo>
+        </modelos>
+    </marca>
+    <marca id="M002" pais="Alemania" dias_existen="100" estilo="Deportivo de Rendimiento">
+        <nombre>Porsche</nombre>
+        <logotipos>
+            <formato tipo="Escudo de Caballos" color_primario="#CC0000" historia="Icono de velocidad y precisión alemana."/>
+        </logotipos>
+        <modelos>
+            <modelo id="C201" nombre="911 Carrera" anio_inicio="1963" anio_actual="2024" tipo="Coupe/Cabrio" motor_primario="Gasolina/Híbrido">
+                <atributos>
+                    <potencia_cv unidad="CaballosVapor">450</potencia_cv>
+                    <transmision tipos_compatibles="Automática">8 velocidades</transmision>
+                    <consumo_combustible ciudad="7.5" autopista="5.8"/>
+                </atributos>
+                <equipamiento>
+                    <sistema_infotainment marca_soporte="Sport Chrono" conectividad="GPS" />
+                    <tecnologia_seguridad incluye="Control de Tracción, Frenado ABS avanzado" />
+                </equipamiento>
+            </modelo>
+            <modelo id="C202" nombre="Cayenne SUV" anio_inicio="2011" anio_actual="2024" tipo="SUV Deportivo" motor_primario="Gasolina">
+                <atributos>
+                    <potencia_cv unidad="CaballosVapor">340</potencia_cv>
+                    <transmision tipos_compatibles="Automática">8 velocidades</transmision>
+                    <consumo_combustible ciudad="9.0" autopista="8.2"/>
+                </atributos>
+                <equipamiento>
+                    <sistema_infotainment marca_soporte="Sport Chrono" conectividad="Telefonía vía Bluetooth" />
+                    <tecnologia_seguridad incluye="Suspensión Adaptativa, Asistencia de Estacionamiento" />
+                </equipamiento>
+            </modelo>
+        </modelos>
+    </marca>
+    <marca id="M003" pais="Japón" dias_existen="150" estilo="Fiabilidad Urbana">
+        <nombre>Toyota</nombre>
+        <logotipos>
+            <formato tipo="Ovalado" color_primario="#CC0000" historia="Símbolo de fiabilidad y gran producción en volumen."/>
+        </logotipos>
+        <modelos>
+            <modelo id="C301" nombre="Corolla" anio_inicio="1966" anio_actual="2024" tipo="Sedán Compacto" motor_primario="Gasolina">
+                <atributos>
+                    <potencia_cv unidad="CaballosVapor">139</potencia_cv>
+                    <transmision tipos_compatibles="Automática, Manual">4 velocidades</transmision>
+                    <consumo_combustible ciudad="5.5" autopista="4.8"/>
+                </atributos>
+                <equipamiento>
+                    <sistema_infotainment marca_soporte="Toyota Connect" conectividad="Apple CarPlay" />
+                    <tecnologia_seguridad incluye="Control de Estabilidad, Sistema de frenado ABS" />
+                </equipamiento>
+            </modelo>
+        </modelos>
+    </marca>
+</catalogo_automocion>

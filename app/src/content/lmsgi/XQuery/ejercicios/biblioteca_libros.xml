@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca catalogo_general="Índice Nacional del Saber" fecha_última_actualización="2026-05-16" bibliotecario="Sistema Opencode">
+    <tarea_bibliografica tarea_id="TA-001" tipo="Catalogación Completa" estado="Completada">
+        <libro isbn="978-8494365814" isbn_tipo="ISBN-13" isbn_valido="si" idioma_original="Español">
+            <metadatos>
+                <titulo>Cien años de soledad</titulo>
+                <gerenre_principal id="G001">Realismo Mágico</gerenre_principal>
+                <generes_secundarios>
+                    <genero_secundario prioridad="Alto" etiqueta="Novela Épica" grado_temático="Mítica"/>
+                    <genero_secundario prioridad="Medio" etiqueta="Ficción Latinoamericana" grado_temático="Cultural"/>
+                    <genero_secundario prioridad="Bajo" etiqueta="Historia Familiar" grado_temático="Sociohistórico"/>
+                </generes_secundarios>
+                <publicacion anio="1967" editorial="Sudamericana" tirada_estimada="10000" formato_físico="Tapa Dura" formato_electronico="EPUB"/>
+            </metadatos>
+            <estructura_contenido>
+                <pagine_estimadas pagina_rango="900" pausas_personales_recomendadas="Sí" formato_digital="eBook, PDF"/>
+                <tema_central tema_clave="Generaciones y el Destino" complejidad_conceptual="Conceptual-Existencial">
+                    <capitulo numero_inicio="1" numero_fin="10" titulo_general="El ascenso y la caída de Macondo"/>
+                    <capitulo numero_inicio="11" numero_fin="20" titulo_general="El ciclo de la violencia y el olvido"/>
+                    <indices_clave>
+                        <indice tema="Personaje Principal" aparece_capitulos="1-7, 12-15" importancia="Máxima"/>
+                        <indice tema="Concepto de Tiempo" aparece_capitulos="1-20" importancia="Crucial"/>
+                    </indices_clave>
+                </tema_central>
+            </estructura_contenido>
+            <autorias>
+                <autor id_autor="A001" nombre="Gabriel García Márquez" nacionalidad="Colombiano" nacimientos="1927-2014">
+                    <obra_destacada idioma_ejemplo="Español">Cien años de soledad</obra_destacada>
+                    <tema_principal>Muerte, Soledad y el Tiempo Circular</tema_principal>
+                    <biografia_breve pagina_referencia="10">Premio Nobel de Literatura por sus novelas.</biografia_breve>
+                    <colaboraciones>
+                        <colab colaborador="Juan Rulfo" tipo="Influencia temática" nivel_afinidad="Alto"/>
+                    </colaboraciones>
+                </autor>
+            </autorias>
+        </libro>
+        <libro isbn="978-8497672252" isbn_tipo="ISBN-13" isbn_valido="si" idioma_original="Francés">
+            <metadatos>
+                <titulo>El extranjero</titulo>
+                <gerenre_principal id="G002">Existencialismo</gerenre_principal>
+                <generes_secundarios>
+                    <genero_secundario prioridad="Alto" etiqueta="Literatura Filosófica" grado_temático="Metafísico"/>
+                    <genero_secundario prioridad="Medio" etiqueta="Nihilismo Moderno" grado_temático="Social"/>
+                </generes_secundarios>
+                <publicacion anio="1942" editorial="Gallimard" tirada_estimada="5000" formato_físico="Tapa Blanda" formato_electronico="PDF"/>
+            </metadatos>
+            <estructura_contenido>
+                <pagine_estimadas pagina_rango="130" pausas_personales_recomendadas="No" formato_digital="PDF"/>
+                <tema_central tema_clave="El Absurdo y la Condena Humana" complejidad_conceptual="Metafísica-Filosófica">
+                    <capitulo numero_inicio="1" numero_fin="3" titulo_general="El encuentro con la indiferencia del destino"/>
+                    <capitulo numero_inicio="4" numero_fin="6" titulo_general="La aceptación y la marginalidad social"/>
+                    <indices_clave>
+                        <indice tema="Narrador Protagonista" aparece_capitulos="todos" importancia="Máxima"/>
+                        <indice tema="La condición burguesa" aparece_capitulos="1, 4, 6" importancia="Media"/>
+                    </indices_clave>
+                </tema_central>
+            </estructura_contenido>
+            <autorias>
+                <autor id_autor="A002" nombre="Albert Camus" nacionalidad="Francés" nacimientos="1913-1960">
+                    <obra_destacada idioma_ejemplo="Español">El extranjero</obra_destacada>
+                    <tema_principal>La confrontación con el absurdo de la existencia</tema_principal>
+                    <biografia_breve pagina_referencia="5">Filósofo clave asociado al existencialismo.</biografia_breve>
+                    <colaboraciones>
+                        <colab colaborador="Jean-Paul Sartre" tipo="Influencia filosófica" nivel_afinidad="Contextual"/>
+                    </colaboraciones>
+                </autor>
+            </autorias>
+        </libro>
+        <libro isbn="978-8494365815" isbn_tipo="ISBN-13" isbn_valido="si" idioma_original="Español">
+            <metadatos>
+                <titulo>El amor en los tiempos del cólera</titulo>
+                <gerenre_principal id="G003">Romance Literario</gerenre_principal>
+                <generes_secundarios>
+                    <genero_secundario prioridad="Alto" etiqueta="Novela Romántica" grado_temático="Afectivo"/>
+                    <genero_secundario prioridad="Medio" etiqueta="Crónica Social" grado_temático="Contextual Histórico"/>
+                    <genero_secundario prioridad="Bajo" etiqueta="Drama de Cuidados" grado_temático="Familiar"/>
+                </generes_secundarios>
+                <publicacion anio="1985" editorial="Sudamericana" tirada_estimada="15000" formato_físico="Tapa Dura" formato_electronico="EPUB"/>
+            </metadatos>
+            <estructura_contenido>
+                <pagine_estimadas pagina_rango="600" pausas_personales_recomendadas="Sí" formato_digital="Kindle, PDF"/>
+                <tema_central tema_clave="La lucha contra el tiempo y el olvido" complejidad_conceptual="Afectiva-Sociohistórica">
+                    <capitulo numero_inicio="1" numero_fin="5" titulo_general="El encuentro inicial en la bahía y el desarrollo de la pasión"/>
+                    <capitulo numero_inicio="6" numero_fin="10" titulo_general="La enfermedad y la persistencia del vínculo afectivo"/>
+                    <indices_clave>
+                        <indice tema="Concepto de Cólera" aparece_capitulos="todos" importancia="Temática Central"/>
+                        <indice tema="Familia de la protagonista" aparece_capitulos="3, 5, 7, 9" importancia="Soporte Emocional"/>
+                    </indices_clave>
+                </tema_central>
+            </estructura_contenido>
+            <autorias>
+                <autor id_autor="A001" nombre="Gabriel García Márquez" nacionalidad="Colombiano" nacimientos="1927-2014">
+                    <obra_destacada idioma_ejemplo="Español">El amor en los tiempos del cólera</obra_destacada>
+                    <tema_principal>La persistencia del afecto humano frente al paso inexorable del tiempo</tema_principal>
+                    <biografia_breve pagina_referencia="10">Maestro del realismo mágico y la prosa detallada.</biografia_breve>
+                    <colaboraciones>
+                        <colab colaborador="Isabel Allende" tipo="Referencia Genérica" nivel_afinidad="Conceptual"/>
+                    </colaboraciones>
+                </autor>
+                 <autor id_autor="A004" nombre="Isabel Allende" nacionalidad="Chilena" nacimientos="1942">
+                    <obra_destacada idioma_ejemplo="Español">La deusa del sur</obra_destacada>
+                    <tema_principal>Feminismo, poder femenino y memoria familiar</tema_principal>
+                    <biografia_breve pagina_referencia="5">Escritora clave del 'Boom' latinoamericano.</biografia_breve>
+                    <colaboraciones />
+                </autor>
+            </autorias>
+        </libro>
+    </tarea_bibliografica>
+</biblioteca>
