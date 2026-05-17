@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 2rem; }
+h1 { color: #e65100; border-bottom: 2px solid #e65100; padding-bottom: 0.5rem; }
+.libro { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0; background: #fff8e1; }
+.libro h2 { margin-top: 0; color: #e65100; }
+.libro.destacado { border-color: #e65100; border-width: 2px; background: #fff3e0; box-shadow: 0 2px 8px rgba(230,81,0,0.15); }
+.libro p { margin: 0.3rem 0; }

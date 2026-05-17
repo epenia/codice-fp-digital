@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 2rem; }
+h1 { color: #2e7d32; border-bottom: 2px solid #2e7d32; padding-bottom: 0.5rem; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th, td { border: 1px solid #ccc; padding: 0.75rem; text-align: left; }
+th { background-color: #2e7d32; color: white; }
+tr:nth-child(even) { background-color: #e8f5e9; }
+.total-potencia { margin-top: 1rem; font-size: 1.1rem; color: #2e7d32; }
