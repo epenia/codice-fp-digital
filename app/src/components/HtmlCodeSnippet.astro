@@ -3,10 +3,46 @@ import { Code } from "astro:components";
 
 interface Props {
   html: string;
-  css?: string; // Opcional, solo para visualización del fuente
+  css?: string;
+  assets?: Record<string, string>;
 }
 
-const { html, css } = Astro.props;
+const { html, css, assets = {} } = Astro.props;
+
+function resolveAssets(code: string, assetsMap: Record<string, string>): string {
+  let result = code;
+  for (const [filename, url] of Object.entries(assetsMap)) {
+    const escaped = filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    result = result.replace(
+      new RegExp(`(src=")${escaped}(")`, 'g'),
+      `$1${url}$2`
+    );
+    result = result.replace(
+      new RegExp(`(href=")${escaped}(")`, 'g'),
+      `$1${url}$2`
+    );
+    result = result.replace(
+      new RegExp(`(url\\(\\s*['"])${escaped}(['"]\\s*\\))`, 'g'),
+      `$1${url}$2`
+    );
+    result = result.replace(
+      new RegExp(`(url\\()${escaped}(\\))`, 'g'),
+      `$1${url}$2`
+    );
+  }
+  return result;
+}
+
+const resolvedHtml = resolveAssets(html, assets);
+const resolvedCss = css ? resolveAssets(css, assets) : '';
+
+const hasInlineStyle = /<style[\s>]/i.test(resolvedHtml);
+
+const srcdoc = (!hasInlineStyle && resolvedCss)
+  ? (resolvedHtml.includes("<head>")
+      ? resolvedHtml.replace("<head>", `<head><style>${resolvedCss}</style>`)
+      : `<html><head><style>${resolvedCss}</style></head><body>${resolvedHtml}</body></html>`)
+  : resolvedHtml;
 ---
 
 <div class="playground-grid">
@@ -30,8 +66,7 @@ const { html, css } = Astro.props;
 
   <div class="preview-column">
     <div class="label">Vista Previa (Navegador)</div>
-    <!-- Pasamos el código directamente sin envoltorios -->
-    <iframe srcdoc={html}></iframe>
+    <iframe srcdoc={srcdoc}></iframe>
   </div>
 </div>
 
