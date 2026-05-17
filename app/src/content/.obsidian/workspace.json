@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lmsgi/XQuery/XQuery_Resumen.md",
+                "file": "lmsgi/HTML/HTML_Resumen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XQuery_Resumen"
+              "title": "HTML_Resumen"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "fcdcb317957ce9b0",
@@ -186,6 +185,7 @@
   },
   "active": "1dbee14951907e0e",
   "lastOpenFiles": [
+    "lmsgi/XQuery/XQuery_Resumen.md",
     "lmsgi/XQuery/ejercicios/musica_rock.xml",
     "lmsgi/XQuery/ejercicios/hotel_reservas.xml",
     "lmsgi/XQuery/ejercicios/coches_marcas.xml",
@@ -204,7 +204,6 @@
     "lmsgi/XSL/ejercicios/ejercicio_anselmo_discos.md",
     "lmsgi/XSL/ejercicios/biblioteca_libros.xq",
     "lmsgi/XSL/ejercicios/hotel_reservas.xq",
-    "lmsgi/XQuery/XQuery_Resumen.md",
     "lmsgi/XQuery/images/xquery_3.png",
     "lmsgi/XQuery/images/xquery_2.png",
     "lmsgi/XQuery/images/xquery_1.png",
