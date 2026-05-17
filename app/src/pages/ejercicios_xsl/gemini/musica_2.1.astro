@@ -1,0 +1,19 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XSL/ejercicios/gemini/Ejercicio_2.1_Exitos_Produccion.md";
+import musicaXml from "../../../content/lmsgi/XSL/ejercicios/musica_rock.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/musica_2_1/index.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/musica_2_1/musica.css?raw";
+---
+
+<Base>
+       <nav><a href="../../index.html">← Volver al índice</a></nav>
+       <h1>Ejercicio XSL Gemini: Archivo Histórico del Rock - Éxitos y Producción</h1>
+       <ContenidoEjercicio />
+
+       <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+       <XmlCodeSnippet xml={musicaXml} />
+</Base>

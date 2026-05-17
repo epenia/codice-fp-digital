@@ -1,0 +1,19 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XSL/ejercicios/gemini/Ejercicio_1.1_Informe_Potencia.md";
+import cochesXml from "../../../content/lmsgi/XSL/ejercicios/coches_marcas.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/coches_1_1/index.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/coches_1_1/estilos_coches.css?raw";
+---
+
+<Base>
+     <nav><a href="../../index.html">← Volver al índice</a></nav>
+     <h1>Ejercicio XSL Gemini: Catálogo de Automoción - Informe de Potencia</h1>
+      <ContenidoEjercicio />
+
+      <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+      <XmlCodeSnippet xml={cochesXml} />
+</Base>

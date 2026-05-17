@@ -1,0 +1,19 @@
+---
+import { Content as ContenidoEjercicio } from "../../../content/lmsgi/XSL/ejercicios/gemini/Ejercicio_3.1_Catalogo_Espanol.md";
+import bibliotecaXml from "../../../content/lmsgi/XSL/ejercicios/biblioteca_libros.xml?raw";
+import XmlCodeSnippet from "../../../components/XmlCodeSnippet.astro";
+import HtmlCodeSnippet from "../../../components/HtmlCodeSnippet.astro";
+import Base from "../../../layout/base.astro";
+import ejercicioHtml from "../../../codigo/ejercicios/xsl/biblioteca_3_1/index.html?raw";
+import ejercicioCss from "../../../codigo/ejercicios/xsl/biblioteca_3_1/biblioteca.css?raw";
+---
+
+<Base>
+       <nav><a href="../../index.html">← Volver al índice</a></nav>
+       <h1>Ejercicio XSL Gemini: Biblioteca y Literatura - Catálogo en Español</h1>
+       <ContenidoEjercicio />
+
+       <HtmlCodeSnippet html={ejercicioHtml} css={ejercicioCss} />
+
+       <XmlCodeSnippet xml={bibliotecaXml} />
+</Base>
