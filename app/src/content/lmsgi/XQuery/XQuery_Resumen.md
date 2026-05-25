@@ -24,13 +24,13 @@ Para hacer funcionar las consultas es dandole al PLAY
 
 > FLWOR es el acrónimo de **For-Let-Where-Order-Return**, la estructura principal de XQuery.
 
-| **Cláusula** | **Descripción**                            | **Ejemplo**                         |
-| ------------ | ------------------------------------------ | ----------------------------------- |
-| **FOR**      | Bucle sobre una secuencia de nodos         | `for $alumno in /escuela/alumno`    |
-| **LET**      | Declara variables para almacenar valores   | `let $total := count($alumno)`      |
-| **WHERE**    | Filtra los resultados según una condición  | `where $alumno/edad > 18`           |
-| **ORDER BY** | Ordena los resultados                      | `order by $alumno/nombre ascending` |
-| **RETURN**   | Especifica qué devolver por cada iteración | `return $alumno/nombre`             |
+| **Cláusula** | **Descripción**                                     | **Ejemplo**                                                                      |
+| ------------ | --------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **FOR**      | Bucle sobre una secuencia de nodos                  | `for $alumno in doc("escuela.xml")/alumno`                                       |
+| **LET**      | Crear una nueva donde almacenar el valor de la suma | `let $alumno := doc("escuela.xml")/alumno`<br><br>`let $total := count($alumno)` |
+| **WHERE**    | Filtra los resultados según una condición           | `where $alumno/edad > 18`                                                        |
+| **ORDER BY** | Ordena los resultados                               | `order by $alumno/nombre ascending`                                              |
+| **RETURN**   | Especifica qué devolver por cada iteración          | `return $alumno/nombre`                                                          |
 
 ### Ejemplo básico FLWOR
 
@@ -120,22 +120,24 @@ let $total := count($alumnos)
 
 ## Funciones XQuery integradas
 
-### Funciones de cadena
+### Funciones para texto
 
-| **Función**                             | **Descripción**                | **Ejemplo**                                      |
-| --------------------------------------- | ------------------------------ | ------------------------------------------------ |
-| `upper-case($str)`                      | Convierte a mayúsculas         | `upper-case("hola")` → `"HOLA"`                  |
-| `lower-case($str)`                      | Convierte a minúsculas         | `lower-case("HOLA")` → `"hola"`                  |
-| `string-length($str)`                   | Longitud de cadena             | `string-length("Hola")` → `4`                    |
-| `concat($str1, $str2)`                  | Concatena cadenas              | `concat("Hola", " Mundo")` → `"Hola Mundo"`      |
-| `substring($str, $inicio, $long?)`      | Extrae subcadena               | `substring("HolaMundo", 1, 4)` → `"Hola"`        |
-| `contains($str1, $str2)`                | Comprueba si contiene          | `contains("HolaMundo", "Mundo")` → `true()`      |
-| `starts-with($str1, $str2)`             | Comprueba si empieza con       | `starts-with("HolaMundo", "Hola")` → `true()`    |
-| `ends-with($str1, $str2)`               | Comprueba si termina con       | `ends-with("archivo.xml", ".xml")` → `true()`    |
-| `normalize-space($str)`                 | Elimina espacios               | `normalize-space("  hola  ")` → `"hola"`         |
-| `translate($str, $from, $to)`           | Reemplaza caracteres           | `translate("hola", "aeiou", "AEIOU")` → `"hOlA"` |
-| `matches($str, $pattern)`               | Coincide con expresión regular | `matches("abc123", "^[a-z]+[0-9]+$")` → `true()` |
-| `replace($str, $pattern, $replacement)` | Reemplaza según patrón         | `replace("abc", "b", "X")` → `"aXc"`             |
+| **Función**                             | **Descripción**                        | **Ejemplo**                                                        |
+| --------------------------------------- | -------------------------------------- | ------------------------------------------------------------------ |
+| `upper-case($str)`                      | Convierte a mayúsculas                 | `upper-case("hola")` → `"HOLA"`                                    |
+| `lower-case($str)`                      | Convierte a minúsculas                 | `lower-case("HOLA")` → `"hola"`                                    |
+| `string-length($str)`                   | Longitud de cadena                     | `string-length("Hola")` → `4`                                      |
+| `concat($str1, $str2)`                  | Concatena cadenas                      | `concat("Hola", " Mundo")` → `"Hola Mundo"`                        |
+| `substring($str, $inicio, $long?)`      | Extrae subcadena                       | `substring("HolaMundo", 1, 4)` → `"Hola"`                          |
+| `contains($str1, $str2)`                | Comprueba si contiene                  | `contains("HolaMundo", "Mundo")` → `true()`                        |
+| `starts-with($str1, $str2)`             | Comprueba si empieza con               | `starts-with("HolaMundo", "Hola")` → `true()`                      |
+| `ends-with($str1, $str2)`               | Comprueba si termina con               | `ends-with("archivo.xml", ".xml")` → `true()`                      |
+| `normalize-space($str)`                 | Elimina espacios                       | `normalize-space("  hola  ")` → `"hola"`                           |
+| `translate($str, $from, $to)`           | Reemplaza caracteres                   | `translate("hola", "aeiou", "AEIOU")` → `"hOlA"`                   |
+| `matches($str, $pattern)`               | Coincide con expresión regular         | `matches("abc123", "^[a-z]+[0-9]+$")` → `true()`                   |
+| `replace($str, $pattern, $replacement)` | Reemplaza según patrón                 | `replace("abc", "b", "X")` → `"aXc"`                               |
+| `data($variable/ruta)`              | Sacar el dato sin etiquetas        | `return data($x/nombreCompleto)`                                   |
+| `distinct-values($ruta)`                | Devuelve valores distintos de una ruta | `distinct-values(doc("escuela.xml")/escuela/alumnos/alumno/curso)` |
 
 ### Funciones numéricas
 

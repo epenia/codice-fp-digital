@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lmsgi/HTML/HTML_Resumen.md",
+                "file": "lmsgi/XQuery/XQuery_Resumen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTML_Resumen"
+              "title": "XQuery_Resumen"
             }
           }
         ]
@@ -185,7 +185,11 @@
   },
   "active": "1dbee14951907e0e",
   "lastOpenFiles": [
+    "lmsgi/XSL/XSL_Resumen.md",
     "lmsgi/XQuery/XQuery_Resumen.md",
+    "lmsgi/HTML/Examenes/HTML Examen 2026 febrero.md",
+    "lmsgi/HTML/Examenes/HTML Examen 2025 febrero.md",
+    "lmsgi/HTML/HTML_Resumen.md",
     "lmsgi/XQuery/ejercicios/musica_rock.xml",
     "lmsgi/XQuery/ejercicios/hotel_reservas.xml",
     "lmsgi/XQuery/ejercicios/coches_marcas.xml",
@@ -193,7 +197,6 @@
     "lmsgi/XQuery/ejercicios/anselmo_discos.xml",
     "lmsgi/XQuery/ejercicios/anselmo_1_1.xml",
     "lmsgi/XQuery/ejercicios/enunciados/anselmo_1_1.md",
-    "lmsgi/XSL/XSL_Resumen.md",
     "lmsgi/XQuery/ejercicios/enunciados/anselmo_discos.md",
     "lmsgi/XQuery/ejercicios/enunciados/biblioteca_libros.md",
     "lmsgi/XQuery/ejercicios/enunciados/coches_marcas.md",
@@ -207,8 +210,6 @@
     "lmsgi/XQuery/images/xquery_3.png",
     "lmsgi/XQuery/images/xquery_2.png",
     "lmsgi/XQuery/images/xquery_1.png",
-    "lmsgi/HTML/Examenes/HTML Examen 2026 febrero.md",
-    "lmsgi/HTML/HTML_Resumen.md",
     "lmsgi/HTML/XSD_Resumen.md",
     "lmsgi/HTML/Soluciones/HTML Solucion Examen 2023 febrero.md",
     "lmsgi/HTML/Soluciones/HTML Solucion Examen 2026 febrero.md",
@@ -220,7 +221,6 @@
     "lmsgi/HTML/Examenes/resources_2025/cartel2.jpg",
     "lmsgi/HTML/Examenes/resources_2025/cartel.jpg",
     "lmsgi/HTML/Examenes/resources_2023/icono.png",
-    "lmsgi/HTML/Examenes/HTML Examen 2025 febrero.md",
     "lmsgi/HTML/Examenes/HTML Examen 2023 febrero.md",
     "lmsgi/XSL/ejercicios/gemini/Ejercicio_1.1_Informe_Potencia.md",
     "lmsgi/XSD/XSD_Resumen.md",
